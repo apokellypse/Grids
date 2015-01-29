@@ -15,47 +15,97 @@ body {
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
-	margin: 0;
+	margin: 0;	
+	text-align: center;
+	font-family: 'Open Sans', sans-serif;
 }
 
 #resume {
 	/*background-image: url("../images/blah.jpg");*/
 }
 
+#container {
+	text-align: left;
+	padding: 0 5%;
+	width: 100vw;
+/*	background-color: rgba(0, 0, 0, .5);
+	height: 100%;*/
+}
+
+#container > article {
+	float: left;
+	width: 26%;
+	margin: 0 1%;
+	padding: 0 1%;
+	background-color: rgba(255, 255, 255, .7);
+}
+
+#bio article {
+	padding: 0 1%;
+	margin: 0 31%;
+}
+
 h1 {
 	font-family: 'MoonFlower', sans-serif;
-	margin: 20px;
-	font-size: 5em;
+	margin: 10px;
+	font-size: 3.5em;
+}
+
+h2 {
+	font-family: 'Fira Mono', serif;
+	font-size: 1.5em;
+}
+
+h3 {
+	font-family: 'Fira Mono', serif;
+	font-size: 1em;
 }
 
 header {
 	background: url("../images/background8.png") 30% no-repeat;
-	padding: 10px;
-	position: absolute;
+	background-size: 200px 330px;
+	padding: 5px;
+	position: fixed;
 	bottom: 0;
-	width: 260px;
+	width: 220px;
 	text-align: center;
 	/*background-color: #f2f2f2;*/
 }
 
 nav div {
 	font-family: 'MoonFlower', sans-serif;
-	padding: 20px;
-	font-size: 3em;
+	padding: 10px;
+	font-size: 2.5em;
 }
 
-a:link, a:hover, a:active, a:focus, a:visited {
+nav > a:link, 
+nav > a:hover, 
+nav > a:active, 
+nav > a:focus, 
+nav > a:visited {
 	text-decoration: none;
 	color: #fff;
 }
 
-a:hover {
+nav > a:hover {
 	font-weight: bold;
+}
+
+a {
+	text-decoration: none;
+	background-color: #dbf064;
+    color: #000;
+	/*background-color: #ffe3d1;*/
+}
+
+a:hover {
+/*	color: #56346f;*/
+    background-color: #f6ffc4;
 }
 
 header > a:link,
 header > a:active,
 header > a:focus,
 header > a:visited {
-	color: purple;
+	color: #4d2b7c;
 }
