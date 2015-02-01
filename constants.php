@@ -5,7 +5,7 @@
 	$portfolio_link = "portfolio.php";
 	$bio_link = "bio.php";
 	$blog_link = "http://apokellypse.wordpress.com";
-	// $guest_link = "guest.php";
+	$guest_link = "guest.php";
 
 	$welcome_msg = 
 	// "Welcome to my website!";

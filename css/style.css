@@ -85,7 +85,7 @@ h3 {
 }
 
 /*http://stackoverflow.com/questions/15855951/how-to-fit-textarea-exactly-inside-a-div-css*/
-textarea{
+textarea {
     height: 100%;
     width: 100%;
    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
@@ -93,10 +93,14 @@ textarea{
     box-sizing: border-box;         /* Opera/IE 8+ */
 }
 
+fieldset {
+	margin-bottom: 20px;
+}
+
 
 header {
-	background: url("../images/background8c.png") 30% no-repeat;
-	background-size: 200px 350px;
+	background: url("../images/background9.png") 30% no-repeat;
+	background-size: 200px 420px;
 	padding: 10px;
 	position: fixed;
 	/*bottom: 0;*/
@@ -163,6 +167,51 @@ header > a:visited {
 	}
 }
 
-@media (max-width:735px) {
+@media (max-width: 900px) {
+	#container {
+		width: inherit;
+	}
+}
 
+@media (max-width: 700px) {
+	body {
+		background: #d8bbd8;
+	}
+
+	#container {
+		margin: 0;
+		width: 100%;
+		padding: 0;
+		text-align: center;
+	}
+
+	#container > article {
+		margin: 0;
+		padding: 30px 10%;
+		width: 80%;
+		margin-bottom: 40px;
+		text-align: left;
+	}
+
+	#container > article img {
+		text-align: center;
+		width: 100%;
+	}
+
+	header {
+		position: static;
+		margin: 0 auto;
+		width: 80%;
+		background: url("../images/background9.png") 50% no-repeat;
+		background-size: 350px 500px;
+		margin-bottom: 40px;
+	}
+
+	h1 {
+		font-size: 5em;
+	}
+
+	nav div {
+		font-size: 3.4em;
+	}
 }
