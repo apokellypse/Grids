@@ -6,5 +6,6 @@
 		<a href="<?=$portfolio_link?>"><div>Portfolio</div></a>
 		<a href="<?=$bio_link?>"><div>Bio</div></a>
 		<a target="_blank" href="<?=$blog_link?>"><div>Blog</div></a>
+		<!-- <a href="<?=$guest_link?>"><div>GuestBook</div></a> -->
 	</nav>
 </header>

@@ -6,8 +6,12 @@
 </head>
 <body id="home">
 	<?php include 'header.php' ?>
-	<section>
-		<h3>Welcome to my humble abode. Please make yourself comfortable and enjoy the cat with the Catintosh featured below.</h3>
+	<section id="container">
+		<h1>Website</h1>
+		<article>
+			<!-- <h3><?=$welcome_msg?></h3> -->
+			<p>Welcome and thank you for visiting! Please sign the <a href="guest.php">guestbook</a> if you can spare the time.</p>
+		</article>
 	</section>
 </body>
 </html>
