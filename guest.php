@@ -78,7 +78,7 @@
 		}
 
 		if (trim($user_comment) == "") {
-			$comment_error = "YOU MUST LEAVE A COMMENT.";
+			$comment_error = "Please leave a comment.";
 		}
 
 
@@ -94,7 +94,7 @@
 			foreach ($aray as $subaray) {
 				// echo $subaray;
 				//want to match exact word, not substring
-				if (strpos("$user_comment", "$subaray") !== FALSE) {
+				if (strpos(strtolower("$user_comment"), "$subaray") !== FALSE) {
 					$comment_error .= "Please keep your comments appropriate.";
 					break;
 				}
@@ -131,6 +131,7 @@
 <!doctype html>
 <html>
 <head>
+	<title>Kelly Yu | GuestBook</title>
 	<?php include 'meta.php' ?>
 	<!--styling for error messages-->
 	<style type="text/css">

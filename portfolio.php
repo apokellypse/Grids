@@ -2,6 +2,7 @@
 <!doctype html>
 <html>
 <head>
+	<title>Kelly Yu | Portfolio</title>
 	<?php include 'meta.php' ?>
 </head>
 <body id="portfolio">
