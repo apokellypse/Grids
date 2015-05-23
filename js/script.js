@@ -1,4 +1,11 @@
 $(document).ready(function() {
+
+	var links = 'a, a:link, a:active, a:focus, a:visited';
+	$(links).addClass('text-light');
+	$('#container').addClass('container-light');
+
+
+	/*This highlights the link to the current page along the nav bar*/
 	$(function() {
 		var p = window.location.pathname.split('/');
 		// console.log(p);
@@ -13,4 +20,48 @@ $(document).ready(function() {
 		    }
 	    });
 	});
+
+	/*This toggles the dark/light theme*/
+	$('.lights').click(function() {
+		console.log('toggling theme');
+		console.log($(this).text());
+		if ($(this).text() == '<Lights On>') {
+			$(this).text('<Lights Off>');
+			$('body').addClass('body-dark');
+
+			$('p, h1, h2, h3, span').removeClass('text-light');
+			$('p, h1, h2, h3, span').addClass('text-dark');
+			$('h1, h2, h3').addClass('text-white2');
+			$(links).addClass('text-white');
+
+			$('#container').removeClass('container-light');
+			$('#container').addClass('container-dark');
+
+			$('h1').addClass('title-dark');
+			$('header').addClass('header-dark');
+		} else {
+			$(this).text('<Lights On>');
+			$('body').removeClass('body-dark');
+
+			$('p, h1, h2, h3, span').removeClass('text-dark');
+			$('p, h1, h2, h3, span').addClass('text-light');
+			$('h1, h2, h3').removeClass('text-white2');
+			$(links).removeClass('text-white');
+
+			$('#container').removeClass('container-dark');
+			$('#container').addClass('container-light');
+
+			$('h1').removeClass('title-dark');
+			$('header').removeClass('header-dark');
+		}
+	});
+
+	// $('#lightsoff').click(function() {
+	// 	$('link[href="style.css"]').attr('href','style2.css');
+	// 	$(this).removeAttr('id');
+	// 	$(this).attr('id', 'lightson');
+	// 	$(this).text('<Lights On>');
+	// 	console.log('lightsoff');
+	// });
+
 })

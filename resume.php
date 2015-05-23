@@ -1,4 +1,3 @@
-<?php include 'constants.php' ?>
 <!doctype html>
 <html>
 <head>
@@ -7,7 +6,7 @@
 </head>
 <body id="resume">
 	<?php include 'header.php' ?>
-	<h1>Resume</h1>
+	<h1>Kelly Yu | Resume</h1>
 	<section id="container">
 		<!-- <article> -->
 			<!-- <a href="dlc/KellyYuResumesp15.pdf" title="download resume" download>download resume</a> -->

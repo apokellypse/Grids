@@ -6,10 +6,10 @@
 </head>
 <body id="home">
 	<?php include 'header.php' ?>
-	<h1>Home</h1>
+	<h1>Kelly Yu | Home</h1>
 	<section id="container">
 		<article>
-			<p>Hi, my name is Kelly Yu and I study <span class="highlight">Computer Science</span> at Cornell University, with a interest in minoring in either <span class="highlight">Game Design</span> or <span class="highlight">Fine Arts</span>.</p>
+			<p>Hi, <span class="highlight">my name is Kelly Yu</span> and I study <span class="highlight">Computer Science</span> at Cornell University, with a interest in minoring in either <span class="highlight">Game Design</span> or <span class="highlight">Fine Arts</span>.</p>
 		</article>
 		<article>
 			<h2>My Dream</h2>
