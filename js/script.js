@@ -22,37 +22,40 @@ $(document).ready(function() {
 	});
 
 	/*This toggles the dark/light theme*/
+	/*If this gets too tiresome, consider swapping css sheets instead of css classes*/
 	$('.lights').click(function() {
 		console.log('toggling theme');
 		console.log($(this).text());
 		if ($(this).text() == '<Lights On>') {
 			$(this).text('<Lights Off>');
-			$('body').addClass('body-dark');
+			$('link[href="light.css"]').attr('href','dark.css');
+			// $('body').addClass('body-dark');
 
-			$('p, h1, h2, h3, span').removeClass('text-light');
-			$('p, h1, h2, h3, span').addClass('text-dark');
-			$('h1, h2, h3').addClass('text-white2');
-			$(links).addClass('text-white');
+			// $('p, h1, h2, h3, span').removeClass('text-light');
+			// $('p, h1, h2, h3, span').addClass('text-dark');
+			// $('h1, h2, h3').addClass('text-white2');
+			// $(links).addClass('text-white');
 
-			$('#container').removeClass('container-light');
-			$('#container').addClass('container-dark');
+			// $('#container').removeClass('container-light');
+			// $('#container').addClass('container-dark');
 
-			$('h1').addClass('title-dark');
-			$('header').addClass('header-dark');
+			// $('h1').addClass('title-dark');
+			// $('header').addClass('header-dark');
 		} else {
 			$(this).text('<Lights On>');
-			$('body').removeClass('body-dark');
+			$('link[href="dark.css"]').attr('href','light.css');
+			// $('body').removeClass('body-dark');
 
-			$('p, h1, h2, h3, span').removeClass('text-dark');
-			$('p, h1, h2, h3, span').addClass('text-light');
-			$('h1, h2, h3').removeClass('text-white2');
-			$(links).removeClass('text-white');
+			// $('p, h1, h2, h3, span').removeClass('text-dark');
+			// $('p, h1, h2, h3, span').addClass('text-light');
+			// $('h1, h2, h3').removeClass('text-white2');
+			// $(links).removeClass('text-white');
 
-			$('#container').removeClass('container-dark');
-			$('#container').addClass('container-light');
+			// $('#container').removeClass('container-dark');
+			// $('#container').addClass('container-light');
 
-			$('h1').removeClass('title-dark');
-			$('header').removeClass('header-dark');
+			// $('h1').removeClass('title-dark');
+			// $('header').removeClass('header-dark');
 		}
 	});
 
