@@ -7,7 +7,7 @@
 </head>
 <body id="portfolio">
 	<?php include 'header.php' ?>
-	<h1>Portfolio</h1>
+	<h1>Projects</h1>
 	<section id="container">
 		<article>
 			<!-- <h2>PleaseCall App</h2>
@@ -37,7 +37,7 @@
 				<li><p>A summer project for my club, <a target="_blank" href="http://cornellanimation.com">Cornell Computer Animation</a></p></li>
 			<!-- <p>I designed the website, which you can view <a href="http://cornellanimation.com">here</a>.</p> -->
 				<li><p>I made several versions of my <a target="_blank" href="https://github.com/apokellypse/apokellypse-dot-com">Personal Website</a> when I was starting out in web design.</p></li>
-				<li><p><a target="_blank" href="https://cornellmeasureless.com">Cornell Measureless</a> was our client for CS 1300.</p></li>
+				<li><p><a target="_blank" href="http://cornellmeasureless.com">Cornell Measureless</a> was our client for CS 1300.</p></li>
 				<li><p><a href="#">FNDY EMS Pipes and Drums</a> was our client for CS 2300.</p></li>
 			</ul>
 
