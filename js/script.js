@@ -28,43 +28,14 @@ $(document).ready(function() {
 		console.log($(this).text());
 		if ($(this).text() == '<Lights On>') {
 			$(this).text('<Lights Off>');
-			$('link[href="light.css"]').attr('href','dark.css');
-			// $('body').addClass('body-dark');
+			$('link[href="css/light.css"]').attr('href','dark.css');
 
-			// $('p, h1, h2, h3, span').removeClass('text-light');
-			// $('p, h1, h2, h3, span').addClass('text-dark');
-			// $('h1, h2, h3').addClass('text-white2');
-			// $(links).addClass('text-white');
-
-			// $('#container').removeClass('container-light');
-			// $('#container').addClass('container-dark');
-
-			// $('h1').addClass('title-dark');
-			// $('header').addClass('header-dark');
 		} else {
 			$(this).text('<Lights On>');
-			$('link[href="dark.css"]').attr('href','light.css');
-			// $('body').removeClass('body-dark');
+			$('link[href="css/light.css"]').attr('href','light.css');
 
-			// $('p, h1, h2, h3, span').removeClass('text-dark');
-			// $('p, h1, h2, h3, span').addClass('text-light');
-			// $('h1, h2, h3').removeClass('text-white2');
-			// $(links).removeClass('text-white');
-
-			// $('#container').removeClass('container-dark');
-			// $('#container').addClass('container-light');
-
-			// $('h1').removeClass('title-dark');
-			// $('header').removeClass('header-dark');
 		}
 	});
 
-	// $('#lightsoff').click(function() {
-	// 	$('link[href="style.css"]').attr('href','style2.css');
-	// 	$(this).removeAttr('id');
-	// 	$(this).attr('id', 'lightson');
-	// 	$(this).text('<Lights On>');
-	// 	console.log('lightsoff');
-	// });
 
 })
