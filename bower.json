@@ -1,0 +1,19 @@
+{
+  "name": "Grids",
+  "version": "0.0.0",
+  "homepage": "https://github.com/apokellypse/Grids",
+  "authors": [
+    "Kelly Yu <kly24@cornell.edu>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "jquery": "~2.1.4"
+  }
+}
