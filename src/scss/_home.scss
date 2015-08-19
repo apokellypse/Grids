@@ -1,0 +1,96 @@
+.page-header {
+  padding: 0 20%;
+  width: 60%; // implied
+
+  height: 121px;
+  position: fixed;
+  background-color: $black-dusk;
+
+  .page-nav {
+
+    .page-nav-list {
+      margin: 0;
+      padding: 0;
+    }
+
+    .page-nav-list-item {
+      float: left;
+      list-style-type: none;
+
+      &:first-child {
+        margin: 0;
+        margin-right: 350px;
+        font-size: 2em;
+      }
+
+      &:not(:first-child) {
+        margin-top: 30px;
+        padding: 15px 20px;
+        font-size: 1.2em;
+
+        .nav-link {
+          @include prefix(box-shadow, 0 2px 0 0 $cardstock);
+          -webkit-transition: margin 0.3s, padding 0.3s, -webkit-transform 0.3s;
+          transition: margin 0.3s, padding 0.3s, transform 0.3s;
+          padding: 5px 0;
+          margin: 0 10px;
+
+          &:hover {
+            padding: 5px 10px;
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+.nav-link {
+
+  color: $cardstock;
+  text-decoration: none;
+
+  // h1
+  .nav-title {
+    margin: 0;
+    margin-right: 16px;
+    font-weight: normal;
+    padding: 20px 0;
+  }
+}
+
+.container {
+  margin: 0 20%;
+  padding-top: 121px;
+  width: 60%;
+  background-color: $backdrop;
+
+  .about-me-wrapper {
+    padding: 20px 40px;
+    box-sizing: border-box;
+    @include prefix(box-shadow, -12px 0 0 0 $cardstock);
+
+    .page-title {
+      margin: 0;
+    }
+  }
+
+  .timeline-wrapper {
+    float: left;
+    width: 100%;
+    padding: 20px 40px;
+    box-sizing: border-box;
+    @include prefix(box-shadow, -12px 0 0 0 $cardstock);
+  }
+
+  .poster-fold {
+    display: inline-block;
+    float: left;
+    width: 50%;
+
+    .profile-pic {
+      width: 100%;
+    }
+  }
+}
+

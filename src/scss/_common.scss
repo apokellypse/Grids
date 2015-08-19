@@ -1,0 +1,22 @@
+html {
+  font-family: $font-stack;
+  color: $black-dusk;
+  background-color: $backdrop;
+}
+
+@mixin prefix($property, $value, $vendors: webkit moz ms o) {
+  @if $vendors {
+    @each $vendor in $vendors {
+      #{"-" + $vendor + "-" + $property}: #{$value};
+    }
+  }
+  #{$property}: #{$value};
+}
+
+@mixin vertical-align {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
