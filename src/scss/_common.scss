@@ -13,10 +13,10 @@ html {
   #{$property}: #{$value};
 }
 
-@mixin vertical-align {
-  position: relative;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+a {
+  color: $burnt-orange;
+  text-decoration: none;
+  @include prefix(box-shadow, 0 2px 0 0 $burnt-orange, webkit moz);
+
+
 }

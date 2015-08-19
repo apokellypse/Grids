@@ -1,96 +1,65 @@
-.page-header {
-  padding: 0 20%;
-  width: 60%; // implied
-
-  height: 121px;
-  position: fixed;
+.header {
   background-color: $black-dusk;
+  padding: 20px 0;
 
-  .page-nav {
+  .header-link {
+    text-decoration: none;
+    color: $cardstock;
+  }
 
-    .page-nav-list {
-      margin: 0;
-      padding: 0;
-    }
+  .header-title {
+    text-align: center;
+    font-size: 4em;
+    font-weight: normal;
+    margin: 0;
+  }
+}
 
-    .page-nav-list-item {
-      float: left;
+.nav-trigger {
+  background-color: $grey;
+  display: block;
+  font-size: 1.2em;
+  color: $cardstock;
+  text-align: center;
+  text-decoration: none;
+  padding: 10px 0;
+}
+
+.nav {
+
+  .nav-list {
+    margin: 0;
+    padding: 0;
+
+    .nav-list-item {
       list-style-type: none;
+      background-color: $navy-blue;
+      font-size: 1.2em;
+      text-align: center;
+      padding: 10px 0;
+      border-top: 2px solid $black-dusk;
 
-      &:first-child {
-        margin: 0;
-        margin-right: 350px;
-        font-size: 2em;
-      }
-
-      &:not(:first-child) {
-        margin-top: 30px;
-        padding: 15px 20px;
-        font-size: 1.2em;
-
-        .nav-link {
-          @include prefix(box-shadow, 0 2px 0 0 $cardstock);
-          -webkit-transition: margin 0.3s, padding 0.3s, -webkit-transform 0.3s;
-          transition: margin 0.3s, padding 0.3s, transform 0.3s;
-          padding: 5px 0;
-          margin: 0 10px;
-
-          &:hover {
-            padding: 5px 10px;
-            margin: 0;
-          }
-        }
+      .nav-link {
+        box-shadow: none;
+        // @include prefix(box-shadow, 0 2px 0 0 $cardstock, webkit moz);
+        text-decoration: none;
+        color: $cardstock;
       }
     }
   }
 }
 
-.nav-link {
-
-  color: $cardstock;
-  text-decoration: none;
-
-  // h1
-  .nav-title {
-    margin: 0;
-    margin-right: 16px;
-    font-weight: normal;
-    padding: 20px 0;
-  }
+.wrapper {
+  @include prefix(box-shadow, 0 2px 0 0 $burnt-orange, webkit moz);
+  padding-bottom: 10px;
 }
 
 .container {
-  margin: 0 20%;
-  padding-top: 121px;
-  width: 60%;
-  background-color: $backdrop;
+  padding: 10px 16px;
 
-  .about-me-wrapper {
-    padding: 20px 40px;
-    box-sizing: border-box;
-    @include prefix(box-shadow, -12px 0 0 0 $cardstock);
-
-    .page-title {
-      margin: 0;
-    }
-  }
-
-  .timeline-wrapper {
-    float: left;
-    width: 100%;
-    padding: 20px 40px;
-    box-sizing: border-box;
-    @include prefix(box-shadow, -12px 0 0 0 $cardstock);
-  }
-
-  .poster-fold {
-    display: inline-block;
-    float: left;
-    width: 50%;
-
-    .profile-pic {
-      width: 100%;
-    }
+  .about-me,
+  .timeline {
+    padding: 0 16px;
+    @include prefix(box-shadow, -16px 0 0 0 $burnt-orange, webkit moz);
   }
 }
-
