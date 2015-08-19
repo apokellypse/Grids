@@ -1,5 +1,9 @@
-.header {
+.nav-bar {
+  width: 100%;
   background-color: $black-dusk;
+}
+
+.header {
   padding: 20px 0;
 
   .header-link {
@@ -50,7 +54,8 @@
 }
 
 .wrapper {
-  @include prefix(box-shadow, 0 2px 0 0 $burnt-orange, webkit moz);
+  // border-top: 8px solid $burnt-orange;
+  @include prefix(box-shadow, 0 -2px 0 0 $burnt-orange, webkit moz);
   padding-bottom: 10px;
 }
 
@@ -59,7 +64,112 @@
 
   .about-me,
   .timeline {
-    padding: 0 16px;
+    margin: 0;
+    padding: 20px 16px;
     @include prefix(box-shadow, -16px 0 0 0 $burnt-orange, webkit moz);
+  }
+}
+
+@media (min-width: 800px) {
+
+  .nav-bar {
+    position: fixed;
+    background-color: rgba(0,0,0,0);
+  }
+
+  .nav-trigger {
+    display: none;
+  }
+
+  .header {
+    background-color: $black-dusk;
+
+    .header-link {
+
+      .header-title {
+        text-align: left;
+        padding: 0 20px;
+      }
+    }
+  }
+
+  .nav {
+    position: relative;
+    top: -80px;
+    float: right;
+    z-index: 1;
+
+    .nav-list {
+
+      .nav-list-item {
+        display: inline-block;
+        background-color: rgba(0,0,0,0);
+        border-top: 0px;
+
+        .nav-link {
+          padding: 10px 0;
+          margin: 0 20px;
+          -webkit-transition: margin 0.3s, padding 0.3s, -webkit-transform 0.3s;
+          transition: margin 0.3s, padding 0.3s, transform 0.3s;
+          @include prefix(box-shadow, 0 2px 0 0 $cardstock, webkit moz);
+
+          &:hover {
+            padding: 10px 6px;
+            margin: 0 14px;
+          }
+        }
+      }
+    }
+  }
+
+  .container {
+    padding-top: 130px;
+  }
+
+}
+
+@media (min-width: 1000px) {
+
+  .nav-bar-wrapper {
+    position: fixed;
+    width: 100%;
+    background-color: $black-dusk;
+    height: 121px;
+  }
+
+  .nav-bar {
+    width: 1000px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+  }
+
+  .header {
+
+    .header-link {
+
+      .header-title {
+      }
+    }
+  }
+
+  .nav {
+
+    .nav-list {
+
+      .nav-list-item {
+
+        .nav-link {
+
+        }
+      }
+    }
+  }
+
+  .container {
+    width: 1000px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
   }
 }
