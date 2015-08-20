@@ -1,14 +1,11 @@
-.container {
-
-  .accent-header {
-    margin: 0;
-    padding: 20px 16px;
-    @include prefix(box-shadow, -16px 0 0 0 $burnt-orange, webkit moz);
-  }
-}
-
 @media (min-width: 800px) {
 }
 
 @media (min-width: 1000px) {
+  .year {
+    width: 45%;
+    margin-right: 4%;
+    display: inline-block;
+    vertical-align: top;
+  }
 }

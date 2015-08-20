@@ -19,12 +19,23 @@ a {
   @include prefix(box-shadow, 0 2px 0 0 $burnt-orange, webkit moz);
 }
 
+.accent-header {
+  margin: 8px 0;
+  margin-left: 8px;
+  padding: 20px 16px;
+  @include prefix(box-shadow, -16px 0 0 0 $burnt-orange, webkit moz);
+}
+
 .secondary-header {
+  margin: 8px 0;
+  margin-left: 8px;
   padding: 12px 16px;
   @include prefix(box-shadow, -16px 0 0 0 $cardstock, webkit moz);
 }
 
 .tertiary-header {
+  margin: 8px 0;
+  margin-left: 8px;
   padding: 8px 16px;
   @include prefix(box-shadow, -16px 0 0 0 $navy-blue, webkit moz);
 }
@@ -36,6 +47,8 @@ a {
   border-radius: 20px;
   padding: 4px 16px;
   margin: 0;
+  margin-left: 24px;
+  margin-bottom: 24px;
 }
 
 .hidden {
@@ -117,15 +130,16 @@ a {
 
 .container {
   padding: 10px 16px;
-
-  .accent-header {
-    margin: 0;
-    padding: 20px 16px;
-    @include prefix(box-shadow, -16px 0 0 0 $burnt-orange, webkit moz);
-  }
 }
 
+
 @media (min-width: 800px) {
+
+  .accent-header,
+  .secondary-header,
+  .tertiary-header {
+    margin-left: 16px;
+  }
 
   .nav-bar {
     position: fixed;

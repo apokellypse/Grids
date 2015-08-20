@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <title>Kelly Yu</title>
+</head>
+<body>
+
+<!--<h1>List of Animals and Sounds</h1>
+<div id="animalList">
+</div>-->
+
+<!-- HANDLEBARS TEMPLATE -->
+<!--<script id="animalTemplate" type="text/x-handlebars-template">
+  <ul>
+    {{#animals}}
+      <li class="animal">{{type}} says {{sound}}</li>
+    {{/animals}}
+  </ul>
+</script>-->
+
+<div class="nav-bar-wrapper">
+
+  <div class="nav-bar">
+
+    <header class="header">
+      <a class="header-link" href="index.html"><h1 class="header-title">Kelly Yu</h1></a>
+    </header>
+
+    <a class="nav-trigger" href="#">+ expand menu +</a>
+
+    <!-- turn into template -->
+    <nav class="nav hidden">
+      <ul class="nav-list">
+
+        <li class="nav-list-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-list-item">
+          <a class="nav-link" href="resume.html">Resume</a>
+        </li>
+        <li class="nav-list-item">
+          <a class="nav-link" href="code.html">Code</a>
+        </li>
+        <li class="nav-list-item">
+          <a class="nav-link" href="#">Artwork</a>
+        </li>
+        <li class="nav-list-item">
+          <a class="nav-link" href="#">Blog</a>
+        </li>
+
+      </ul>
+    </nav>
+
+  </div>
+</div>
+
+<article class="container">
+
+  <section class="wrapper">
+
+    <h1 class="accent-header">Notice: Site Under Construction</h1>
+    <p>This website is currently under construction! Please pardon broken links and unfinalized content.</p>
+    <p>Projected Completion date is August 22nd, 2015.</p>
+
+  </section>
+
+  <section class="about-me-wrapper wrapper">
+
+    <h1 class="about-me accent-header">About</h1>
+    <p>I'm a junior at Cornell University pursuing a B.S. in <a href="#">Computer Science</a>, and possibly the <a href="#">Game Design</a> or <a href="#">Fine Arts</a> minor.</p>
+    <p>Thanks for visiting my website!</p>
+
+  </section>
+
+  <!-- convert this to template eventually, with loops -->
+  <section class="timeline-wrapper wrapper">
+    <h1 class="timeline accent-header">My Journey</h1>
+
+    <div class="year">
+      <h2 class="secondary-header">2011</h2>
+      <ul class="vip-list">
+        <li class="vip-list-item">
+          Learned Animation and Modeling in 3ds Max
+        </li>
+      </ul>
+    </div>
+
+    <div class="year">
+      <h2 class="secondary-header">2012</h2>
+      <ul class="vip-list">
+        <li class="vip-list-item">
+          Started using Photoshop, Flash, After FX, Illustrator
+        </li>
+      </ul>
+    </div>
+
+    <div class="year">
+      <h2 class="secondary-header">2013</h2>
+      <ul class="vip-list">
+        <li class="vip-list-item">
+          Became interested in websites and computer graphics
+        </li>
+        <li class="vip-list-item">
+          Began to consider Computer Science as major
+        </li>
+        <li class="vip-list-item">
+          Graduated High School
+        </li>
+        <li class="vip-list-item">
+          Entered Cornell University
+        </li>
+        <li class="vip-list-item">
+          Took first coding class in Python
+        </li>
+      </ul>
+    </div>
+
+    <div class="year">
+      <h2 class="secondary-header">2014</h2>
+      <ul class="vip-list">
+        <li class="vip-list-item">
+          Learned Java
+        </li>
+        <li class="vip-list-item">
+          Begin to play with Maya and Blender for 3d modeling
+        </li>
+        <li class="vip-list-item">
+          Created first <a href="#">website</a>
+        </li>
+        <li class="vip-list-item">
+          Attended SIGGRAPH 2014 in Vancouver
+        </li>
+        <li class="vip-list-item">
+          Took introductory Computer Graphics class
+        </li>
+        <li class="vip-list-item">
+          Learned some OCaml
+        </li>
+      </ul>
+    </div>
+
+    <div class="year">
+      <h2 class="secondary-header">2015</h2>
+      <ul class="vip-list">
+        <li class="vip-list-item">
+          Learned some C
+        </li>
+        <li class="vip-list-item">
+          Took first art course in Painting
+        </li>
+        <li class="vip-list-item">
+          Interned as a Web Developer at LinkedIn
+        </li>
+        <li class="vip-list-item">
+          Attended SIGGRAPH 2015 in LA
+        </li>
+      </ul>
+    </div>
+
+  </section>
+
+</article>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://cdn.jsdelivr.net/handlebarsjs/3.0.3/handlebars.min.js"></script>
+<script src="js/all.js"></script>
+
+
+</body>
+</html>
