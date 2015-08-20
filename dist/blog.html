@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <title>Kelly Yu | Blog</title>
+</head>
+<body>
+
+<div class="nav-bar-wrapper">
+
+  <div class="nav-bar">
+
+    <header class="header">
+      <a class="header-link" href="index.html"><h1 class="header-title">Kelly Yu</h1></a>
+    </header>
+
+    <a class="js-nav-trigger nav-trigger" href="#">+ expand menu +</a>
+
+    <!-- turn into template -->
+    <nav class="nav hidden">
+      <ul class="nav-list">
+
+        <li class="nav-list-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-list-item">
+          <a class="nav-link" href="resume.html">Resume</a>
+        </li>
+        <li class="nav-list-item">
+          <a class="nav-link" href="code.html">Code</a>
+        </li>
+        <li class="nav-list-item">
+          <a class="nav-link" href="artwork.html">Artwork</a>
+        </li>
+        <li class="nav-list-item">
+          <a class="nav-link current-page" href="blog.html">Blog</a>
+        </li>
+
+      </ul>
+    </nav>
+
+  </div>
+</div>
+
+<article class="container js-blog-template">
+
+  <script class="js-blog-script" type="text/x-handlebars-template">
+    <section class="wrapper">
+      <h1 class="accent-header">Wordpress Blog</h1>
+      <p><a target="_blank" href="https://apokellypse.wordpress.com/">Visit the complete blog!</a></p>
+    </section>
+
+    {{#posts}}
+      <div class="two-col abridged">
+        <section class="wrapper">
+          <h2 class="secondary-header">{{title}}</h2>
+          <p class="date js-unformatted">{{date}}</p>
+          {{{content}}}
+          <p class="read-more"><a target="_blank" class="read-more-link" href="{{URL}}">Read More</a></p>
+        </section>
+      </div>
+    {{/posts}}
+  </script>
+
+</article>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://cdn.jsdelivr.net/handlebarsjs/3.0.3/handlebars.min.js"></script>
+<script src="js/all.js"></script>
+
+
+
+</body>
+</html>

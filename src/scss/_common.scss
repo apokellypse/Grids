@@ -2,6 +2,7 @@ html {
   font-family: $font-stack;
   color: $black-dusk;
   background-color: $backdrop;
+  padding-bottom: 100px;
 }
 
 @mixin prefix($property, $value, $vendors: webkit moz ms o) {
@@ -53,6 +54,29 @@ a {
 
 .hidden {
   display: none;
+}
+
+.abridged {
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+
+  .read-more {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    // text-align: center;
+    margin: 0;
+    padding: 60px 0 0 0;
+
+    background-image: linear-gradient(to bottom, transparent, $backdrop);
+    border-bottom: 2px solid $burnt-orange;
+
+    .read-more-link {
+    }
+  }
+
 }
 
 .nav-bar {
@@ -112,6 +136,10 @@ a {
         &:active,
         &:focus,
         &:hover {
+          background-color: $black-dusk;
+        }
+
+        &.current-page {
           background-color: $black-dusk;
         }
       }
@@ -183,8 +211,12 @@ a {
           @include prefix(box-shadow, 0 2px 0 0 $cardstock, webkit moz);
 
           &:hover {
-            padding: 10px 6px;
+            padding: 10px 6px 10px 6px;
             margin: 0 14px;
+          }
+
+          &.current-page {
+            @include prefix(box-shadow, 0 4px 0 0 $cardstock, webkit moz);
           }
         }
       }
@@ -204,6 +236,7 @@ a {
     width: 100%;
     background-color: $black-dusk;
     height: 121px;
+    z-index: 1;
   }
 
   .nav-bar {
@@ -218,5 +251,19 @@ a {
     margin: 0 auto;
     left: 0;
     right: 0;
+  }
+
+  .two-col {
+    width: 45%;
+    margin-right: 4%;
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  .three-col {
+    width: 30%;
+    margin-right: 3%;
+    display: inline-block;
+    vertical-align: top;
   }
 }

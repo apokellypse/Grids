@@ -8,19 +8,6 @@
 </head>
 <body>
 
-<!--<h1>List of Animals and Sounds</h1>
-<div id="animalList">
-</div>-->
-
-<!-- HANDLEBARS TEMPLATE -->
-<!--<script id="animalTemplate" type="text/x-handlebars-template">
-  <ul>
-    {{#animals}}
-      <li class="animal">{{type}} says {{sound}}</li>
-    {{/animals}}
-  </ul>
-</script>-->
-
 <div class="nav-bar-wrapper">
 
   <div class="nav-bar">
@@ -29,14 +16,14 @@
       <a class="header-link" href="index.html"><h1 class="header-title">Kelly Yu</h1></a>
     </header>
 
-    <a class="nav-trigger" href="#">+ expand menu +</a>
+    <a class="js-nav-trigger nav-trigger" href="#">+ expand menu +</a>
 
     <!-- turn into template -->
     <nav class="nav hidden">
       <ul class="nav-list">
 
         <li class="nav-list-item">
-          <a class="nav-link" href="index.html">Home</a>
+          <a class="nav-link current-page" href="index.html">Home</a>
         </li>
         <li class="nav-list-item">
           <a class="nav-link" href="resume.html">Resume</a>
@@ -45,10 +32,10 @@
           <a class="nav-link" href="code.html">Code</a>
         </li>
         <li class="nav-list-item">
-          <a class="nav-link" href="#">Artwork</a>
+          <a class="nav-link" href="artwork.html">Artwork</a>
         </li>
         <li class="nav-list-item">
-          <a class="nav-link" href="#">Blog</a>
+          <a class="nav-link" href="blog.html">Blog</a>
         </li>
 
       </ul>
@@ -79,25 +66,23 @@
   <section class="timeline-wrapper wrapper">
     <h1 class="timeline accent-header">My Journey</h1>
 
-    <div class="year">
+
+    <div class="two-col year">
+
       <h2 class="secondary-header">2011</h2>
       <ul class="vip-list">
         <li class="vip-list-item">
           Learned Animation and Modeling in 3ds Max
         </li>
       </ul>
-    </div>
 
-    <div class="year">
       <h2 class="secondary-header">2012</h2>
       <ul class="vip-list">
         <li class="vip-list-item">
           Started using Photoshop, Flash, After FX, Illustrator
         </li>
       </ul>
-    </div>
 
-    <div class="year">
       <h2 class="secondary-header">2013</h2>
       <ul class="vip-list">
         <li class="vip-list-item">
@@ -116,16 +101,17 @@
           Took first coding class in Python
         </li>
       </ul>
+
     </div>
 
-    <div class="year">
+    <div class="two-col year">
       <h2 class="secondary-header">2014</h2>
       <ul class="vip-list">
         <li class="vip-list-item">
           Learned Java
         </li>
         <li class="vip-list-item">
-          Begin to play with Maya and Blender for 3d modeling
+          Began to use Maya and Blender for 3d modeling
         </li>
         <li class="vip-list-item">
           Created first <a href="#">website</a>
@@ -140,9 +126,7 @@
           Learned some OCaml
         </li>
       </ul>
-    </div>
 
-    <div class="year">
       <h2 class="secondary-header">2015</h2>
       <ul class="vip-list">
         <li class="vip-list-item">
@@ -158,6 +142,7 @@
           Attended SIGGRAPH 2015 in LA
         </li>
       </ul>
+
     </div>
 
   </section>

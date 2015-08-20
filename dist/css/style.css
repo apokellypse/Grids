@@ -359,7 +359,8 @@ th {
 html {
   font-family: "Source Sans Pro", sans-serif;
   color: #1e1e20;
-  background-color: #f2f2f2; }
+  background-color: #f2f2f2;
+  padding-bottom: 100px; }
 
 a {
   color: #dc3522;
@@ -405,6 +406,20 @@ a {
 .hidden {
   display: none; }
 
+.abridged {
+  height: 400px;
+  position: relative;
+  overflow: hidden; }
+  .abridged .read-more {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding: 60px 0 0 0;
+    background-image: linear-gradient(to bottom, transparent, #f2f2f2);
+    border-bottom: 2px solid #dc3522; }
+
 .nav-bar {
   width: 100%;
   background-color: #1e1e20; }
@@ -448,6 +463,8 @@ a {
       .nav .nav-list .nav-list-item .nav-link:active,
       .nav .nav-list .nav-list-item .nav-link:focus,
       .nav .nav-list .nav-list-item .nav-link:hover {
+        background-color: #1e1e20; }
+      .nav .nav-list .nav-list-item .nav-link.current-page {
         background-color: #1e1e20; }
 
 .wrapper {
@@ -493,8 +510,12 @@ a {
         -moz-box-shadow: 0 2px 0 0 #d9cb9e;
         box-shadow: 0 2px 0 0 #d9cb9e; }
         .nav .nav-list .nav-list-item .nav-link:hover {
-          padding: 10px 6px;
+          padding: 10px 6px 10px 6px;
           margin: 0 14px; }
+        .nav .nav-list .nav-list-item .nav-link.current-page {
+          -webkit-box-shadow: 0 4px 0 0 #d9cb9e;
+          -moz-box-shadow: 0 4px 0 0 #d9cb9e;
+          box-shadow: 0 4px 0 0 #d9cb9e; }
   .container {
     padding-top: 130px; } }
 
@@ -503,7 +524,8 @@ a {
     position: fixed;
     width: 100%;
     background-color: #1e1e20;
-    height: 121px; }
+    height: 121px;
+    z-index: 1; }
   .nav-bar {
     width: 1000px;
     margin: 0 auto;
@@ -513,18 +535,14 @@ a {
     width: 1000px;
     margin: 0 auto;
     left: 0;
-    right: 0; } }
-
-@media (min-width: 1000px) {
-  .year {
+    right: 0; }
+  .two-col {
     width: 45%;
     margin-right: 4%;
     display: inline-block;
-    vertical-align: top; } }
-
-@media (min-width: 1000px) {
-  .resume-section {
-    width: 45%;
-    margin-right: 4%;
+    vertical-align: top; }
+  .three-col {
+    width: 30%;
+    margin-right: 3%;
     display: inline-block;
     vertical-align: top; } }

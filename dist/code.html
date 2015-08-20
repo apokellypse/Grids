@@ -16,7 +16,7 @@
       <a class="header-link" href="index.html"><h1 class="header-title">Kelly Yu</h1></a>
     </header>
 
-    <a class="nav-trigger" href="#">+ expand menu +</a>
+    <a class="js-nav-trigger nav-trigger" href="#">+ expand menu +</a>
 
     <nav class="nav">
       <ul class="nav-list">
@@ -28,13 +28,13 @@
           <a class="nav-link" href="resume.html">Resume</a>
         </li>
         <li class="nav-list-item">
-          <a class="nav-link" href="code.html">Code</a>
+          <a class="nav-link current-page" href="code.html">Code</a>
         </li>
         <li class="nav-list-item">
-          <a class="nav-link" href="#">Artwork</a>
+          <a class="nav-link" href="artwork.html">Artwork</a>
         </li>
         <li class="nav-list-item">
-          <a class="nav-link" href="#">Blog</a>
+          <a class="nav-link" href="blog.html">Blog</a>
         </li>
 
       </ul>
@@ -48,97 +48,131 @@
 <article class="container">
 
   <section class="wrapper">
-    <h1 class="accent-header">PleaseCall App</h1>
+    <h1 class="accent-header">Hackathons</h1>
 
-    <h2 class="secondary-header">Bloomberg Hackathon</h2>
-    <p class="date">Feb 2014</p>
+    <div class="hackathons two-col">
+      <h2 class="secondary-header">Venda Web App</h2>
+      <h3 class="tertiary-header">LinkedIn Intern HackDay</h3>
+      <p class="date">July 2015</p>
 
-    <ul>
-      <li>team of 5</li>
-      <li>did portion of UI design using XML</li>
-      <li>wrote MySQL for the database</li>
-      <li>learned Git basics</li>
-    </ul>
-  </section>
+      <ul>
+        <li>Team of 5</li>
+        <li>Designed information architecture and front-end</li>
+        <li>Implemented front-end with HTML, SASS, JavaScript</li>
+        <li>Learned JavaScript task-runner basics</li>
+      </ul>
+    </div>
 
-  <section class="wrapper">
-    <h1 class="accent-header">Team ShortFilm</h1>
+    <div class="hackathons two-col">
+      <h2 class="secondary-header">PleaseCall Mobile App</h2>
+      <h3 class="tertiary-header">Bloomberg Hackathon</h3>
+      <p class="date">Feb 2014</p>
 
-    <h2 class="secondary-header">Computer Graphics Practicum (CS 4621)</h2>
-    <ul>
-      <li>team of 4</li>
-      <li>used Autodesk Maya's Python API to export Maya Scenes into a framework</li>
-      <li>rendered the scenes with our custom shaders and lights</li>
-    </ul>
-  </section>
+      <ul>
+        <li>Team of 5</li>
+        <li>Did portion of UI design</li>
+        <li>Wrote MySQL for the database</li>
+        <li>Learned Git basics</li>
+      </ul>
+    </div>
 
-  <section class="wrapper">
-    <h1 class="accent-header">Pokemon Showdown</h1>
 
-    <h2 class="secondary-header">CS 3110</h2>
-    <ul>
-      <li>implemented the model and controller for Pokemon Showdown in OCaml</li>
-      <li>interfaced with a Java GUI to update the view of the battle</li>
-    </ul>
-  </section>
-
-  <section class="wrapper">
-    <h1 class="accent-header">Impulse</h1>
-
-    <h2 class="secondary-header">Introductory Game Design (CS 3152)</h2>
-    <ul>
-      <li>novel action-platformer that allows players to "pulse" (reflect) off platforms to escape obstacles</li>
-      <li>colored all assets</li>
-      <li>co-designed all levels</li>
-      <li>interfaced between designers and programmers</li>
-      <li>designed final poster, backgrounds, and textures</li>
-    </ul>
 
   </section>
 
   <section class="wrapper">
-    <h1 class="accent-header">Lord of the Cache</h1>
+    <h1 class="accent-header">Games</h1>
 
-    <h2 class="secondary-header">CS 3410</h2>
-    <ul>
-      <li>wrote an AI bot that optimized writing to memory as fast as possible using a cache</li>
-      <li>bot also inhibits an opposing from writing to memory</li>
-    </ul>
+    <div class="games two-col">
+      <h2 class="secondary-header">Impulse</h2>
+      <h3 class="tertiary-header">Introductory Game Design (CS 3152)</h3>
+      <ul>
+        <li>novel action-platformer that allows players to "pulse" (reflect) off platforms to escape obstacles</li>
+        <li>colored all assets</li>
+        <li>co-designed all levels</li>
+        <li>interfaced between designers and programmers</li>
+        <li>designed final poster, backgrounds, and textures</li>
+      </ul>
+    </div>
+
   </section>
 
   <section class="wrapper">
-    <h1 class="accent-header">CritterWorld</h1>
+    <h1 class="accent-header">Academic</h1>
 
-    <h2 class="secondary-header">CS 2112</h2>
-    <ul>
-      <li>critter simulator</li>
-      <li>critters have rules / grammar which dictate how they mutate, attack, mate, eat, spawn, and die</li>
-      <li>involved parsing &amp; fault injection, synchronization, and networks</li>
-    </ul>
+    <div class="class two-col">
+      <h2 class="secondary-header">Team ShortFilm</h2>
+      <h3 class="tertiary-header">Computer Graphics Practicum (CS 4621)</h3>
+      <ul>
+        <li>team of 4</li>
+        <li>used Autodesk Maya's Python API to export Maya Scenes into a framework</li>
+        <li>rendered the scenes with our custom shaders and lights</li>
+      </ul>
+    </div>
+
+    <div class="class two-col">
+      <h2 class="secondary-header">Pokemon Showdown</h2>
+      <h3 class="tertiary-header">CS 3110</h3>
+
+      <ul>
+        <li>implemented the model and controller for Pokemon Showdown in OCaml</li>
+        <li>interfaced with a Java GUI to update the view of the battle</li>
+      </ul>
+    </div>
+
+    <div class="class two-col">
+      <h2 class="secondary-header">Lord of the Cache</h2>
+      <h3 class="tertiary-header">CS 3410</h3>
+
+      <ul>
+        <li>wrote an AI bot that optimized writing to memory as fast as possible using a cache</li>
+        <li>bot also inhibits an opposing from writing to memory</li>
+      </ul>
+    </div>
+
+    <div class="class two-col">
+      <h2 class="secondary-header">CritterWorld</h2>
+      <h3 class="tertiary-header">CS 2112</h3>
+
+      <ul>
+        <li>critter simulator</li>
+        <li>critters have rules / grammar which dictate how they mutate, attack, mate, eat, spawn, and die</li>
+        <li>involved parsing &amp; fault injection, synchronization, and networks</li>
+      </ul>
+    </div>
+
   </section>
+
+
+
 
   <section class="wrapper">
     <h1 class="accent-header">Websites</h1>
 
-    <h2 class="secondary-header">Personal Website</h2>
-    <ul>
-      <li>Developed with SASS, HTML, and JavaScript</li>
-      <li>Plans to use HandleBars for templating and higher code reuse</li>
-      <li>Using Gulp.js as JavaScript task runner</li>
-    </ul>
+    <div class="sites two-col">
+      <h2 class="secondary-header">Personal Website</h2>
+      <ul>
+        <li>Developed with SASS, HTML, and JavaScript, and Handlebars.js</li>
+        <li>Using Wordpress REST API to retreive blog posts, render them with Handlebars, and display on website</li>
+        <li>Using Gulp.js as JavaScript task runner</li>
+      </ul>
+    </div>
 
-    <h2 class="secondary-header">Cornell Measureless</h2>
-    <ul>
-      <li>Implemented JavaScript interactivity</li>
-      <li>Added PHP upload capabilities and security features</li>
-    </ul>
+    <div class="sites two-col">
+      <h2 class="secondary-header">Cornell Measureless</h2>
+      <ul>
+        <li>Implemented JavaScript interactivity</li>
+        <li>Added PHP upload capabilities and security features</li>
+      </ul>
+    </div>
+
   </section>
 
 </article>
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<!-- <script src="http://cdn.jsdelivr.net/handlebarsjs/3.0.3/handlebars.min.js"></script> -->
+<script src="http://cdn.jsdelivr.net/handlebarsjs/3.0.3/handlebars.min.js"></script>
 <script src="js/all.js"></script>
 
 
