@@ -3,6 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <title>Kelly Yu | Blog</title>
 </head>
@@ -50,18 +53,16 @@
     <section class="wrapper">
       <h1 class="accent-header">Wordpress Blog: Most Recent Posts</h1>
       <p><a target="_blank" href="https://apokellypse.wordpress.com/">Visit the complete blog!</a></p>
-    </section>
 
     {{#posts}}
       <div class="two-col abridged">
-        <section class="wrapper">
-          <h2 class="secondary-header">{{title}}</h2>
-          <p class="date js-unformatted">{{date}}</p>
-          {{{content}}}
-          <p class="read-more"><a target="_blank" class="read-more-link" href="{{URL}}">Read More</a></p>
-        </section>
+        <h2 class="secondary-header">{{title}}</h2>
+        <p class="date js-unformatted">{{date}}</p>
+        {{{content}}}
+        <p class="read-more"><a target="_blank" class="read-more-link" href="{{URL}}">Read More</a></p>
       </div>
     {{/posts}}
+    </section>
   </script>
 
 </article>
