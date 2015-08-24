@@ -399,6 +399,25 @@ p {
   -moz-box-shadow: -22px 0 0 0 #374140;
   box-shadow: -22px 0 0 0 #374140; }
 
+.download {
+  padding: 0;
+  font-size: 1.2em;
+  display: inline-block;
+  -webkit-box-shadow: 0 0 0 2px #dc3522;
+  -moz-box-shadow: 0 0 0 2px #dc3522;
+  box-shadow: 0 0 0 2px #dc3522; }
+  .download a {
+    display: inline-block;
+    padding: 8px 16px;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    -webkit-transition: color 0.3s, background-color 0.3s, -webkit-transform 0.3s;
+    transition: color 0.3s, background-color 0.3s, transform 0.3s; }
+    .download a:hover {
+      color: #f2f2f2;
+      background-color: #dc3522; }
+
 .date {
   display: inline-block;
   color: #374140;

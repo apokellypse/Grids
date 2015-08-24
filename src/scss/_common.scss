@@ -49,6 +49,26 @@ p {
   @include prefix(box-shadow, -22px 0 0 0 $navy-blue, webkit moz);
 }
 
+.download {
+  padding: 0;
+  font-size: 1.2em;
+  display: inline-block;
+  @include prefix(box-shadow, 0 0 0 2px $burnt-orange, webkit moz);
+
+  a {
+    display: inline-block;
+    padding: 8px 16px;
+    @include prefix(box-shadow, none, webkit moz);
+    -webkit-transition: color 0.3s, background-color 0.3s, -webkit-transform 0.3s;
+    transition: color 0.3s, background-color 0.3s, transform 0.3s;
+
+    &:hover {
+      color: $backdrop;
+      background-color: $burnt-orange;
+    }
+  }
+}
+
 .date {
   display: inline-block;
   color: $navy-blue;
