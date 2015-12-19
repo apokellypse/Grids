@@ -358,18 +358,18 @@ th {
 
 html {
   font-family: "Source Sans Pro", sans-serif;
-  color: #1e1e20;
+  color: #001529;
   background-color: #f2f2f2; }
 
 html, body {
   height: 100%; }
 
 a {
-  color: #dc3522;
+  color: #003b56;
   text-decoration: none;
-  -webkit-box-shadow: 0 2px 0 0 #dc3522;
-  -moz-box-shadow: 0 2px 0 0 #dc3522;
-  box-shadow: 0 2px 0 0 #dc3522; }
+  -webkit-box-shadow: 0 2px 0 0 #003b56;
+  -moz-box-shadow: 0 2px 0 0 #003b56;
+  box-shadow: 0 2px 0 0 #003b56; }
 
 p {
   padding-left: 24px; }
@@ -378,34 +378,34 @@ p {
   margin: 8px 0;
   margin-left: 10px;
   padding: 8px 14px;
-  -webkit-box-shadow: -10px 0 0 0 #dc3522;
-  -moz-box-shadow: -10px 0 0 0 #dc3522;
-  box-shadow: -10px 0 0 0 #dc3522; }
+  -webkit-box-shadow: -10px 0 0 0 #003b56;
+  -moz-box-shadow: -10px 0 0 0 #003b56;
+  box-shadow: -10px 0 0 0 #003b56; }
 
 .secondary-header {
   margin: 8px 0;
   margin-left: 16px;
   margin-top: 32px;
   padding: 8px 14px 0 14px;
-  -webkit-box-shadow: -16px 0 0 0 #d9cb9e;
-  -moz-box-shadow: -16px 0 0 0 #d9cb9e;
-  box-shadow: -16px 0 0 0 #d9cb9e; }
+  -webkit-box-shadow: -16px 0 0 0 #98c3c7;
+  -moz-box-shadow: -16px 0 0 0 #98c3c7;
+  box-shadow: -16px 0 0 0 #98c3c7; }
 
 .tertiary-header {
   margin: 8px 0;
   margin-left: 22px;
   padding: 8px 18px 0 18px;
-  -webkit-box-shadow: -22px 0 0 0 #374140;
-  -moz-box-shadow: -22px 0 0 0 #374140;
-  box-shadow: -22px 0 0 0 #374140; }
+  -webkit-box-shadow: -22px 0 0 0 #00657a;
+  -moz-box-shadow: -22px 0 0 0 #00657a;
+  box-shadow: -22px 0 0 0 #00657a; }
 
 .download {
   padding: 0;
   font-size: 1.2em;
   display: inline-block;
-  -webkit-box-shadow: 0 0 0 2px #dc3522;
-  -moz-box-shadow: 0 0 0 2px #dc3522;
-  box-shadow: 0 0 0 2px #dc3522; }
+  -webkit-box-shadow: 0 0 0 2px #003b56;
+  -moz-box-shadow: 0 0 0 2px #003b56;
+  box-shadow: 0 0 0 2px #003b56; }
   .download a {
     display: inline-block;
     padding: 8px 16px;
@@ -416,12 +416,12 @@ p {
     transition: color 0.3s, background-color 0.3s, transform 0.3s; }
     .download a:hover {
       color: #f2f2f2;
-      background-color: #dc3522; }
+      background-color: #003b56; }
 
 .date {
   display: inline-block;
-  color: #374140;
-  border: 2px solid rgba(55, 65, 64, 0.5);
+  color: #00657a;
+  border: 2px solid rgba(0, 101, 122, 0.5);
   border-radius: 20px;
   padding: 4px 16px;
   margin: 0;
@@ -443,17 +443,17 @@ p {
     margin: 0;
     padding: 60px 0 0 0;
     background-image: linear-gradient(to bottom, transparent, #f2f2f2);
-    border-bottom: 2px solid #dc3522; }
+    border-bottom: 2px solid #003b56; }
 
 .nav-bar {
   width: 100%;
-  background-color: #1e1e20; }
+  background-color: #001529; }
 
 .header {
   padding: 20px 0; }
   .header .header-link {
     text-decoration: none;
-    color: #d9cb9e; }
+    color: #98c3c7; }
   .header .header-title {
     text-align: center;
     font-size: 4em;
@@ -461,10 +461,10 @@ p {
     margin: 0; }
 
 .nav-trigger {
-  background-color: #2a2c2b;
+  background-color: #419596;
   display: block;
   font-size: 1.2em;
-  color: #d9cb9e;
+  color: #98c3c7;
   text-align: center;
   text-decoration: none;
   padding: 10px 0;
@@ -475,29 +475,29 @@ p {
   padding: 0; }
   .nav .nav-list .nav-list-item {
     list-style-type: none;
-    background-color: #374140;
-    font-size: 1.2em;
+    background-color: #00657a;
+    font-size: 1.3em;
     text-align: center;
-    border-top: 2px solid #1e1e20; }
+    border-top: 2px solid #001529; }
     .nav .nav-list .nav-list-item .nav-link {
       box-shadow: none;
       display: block;
       text-decoration: none;
-      color: #d9cb9e;
+      color: #98c3c7;
       padding: 10px 0; }
       .nav .nav-list .nav-list-item .nav-link:active,
       .nav .nav-list .nav-list-item .nav-link:focus,
       .nav .nav-list .nav-list-item .nav-link:hover {
-        background-color: #1e1e20; }
+        background-color: #001529; }
       .nav .nav-list .nav-list-item .nav-link.current-page {
-        background-color: #1e1e20; }
+        background-color: #001529; }
 
 .wrapper {
   padding: 30px 0 20px; }
   .wrapper:not(:first-child) {
-    -webkit-box-shadow: 0 -2px 0 0 #dc3522;
-    -moz-box-shadow: 0 -2px 0 0 #dc3522;
-    box-shadow: 0 -2px 0 0 #dc3522; }
+    -webkit-box-shadow: 0 -2px 0 0 #003b56;
+    -moz-box-shadow: 0 -2px 0 0 #003b56;
+    box-shadow: 0 -2px 0 0 #003b56; }
 
 .container {
   min-height: 80%;
@@ -506,12 +506,12 @@ p {
 
 .footer {
   height: 40px;
-  background-color: #1e1e20;
+  background-color: #001529;
   margin-top: 40px;
   text-align: center;
   padding: 20px 0; }
   .footer .footer-text {
-    color: #d9cb9e;
+    color: #98c3c7;
     margin: 0; }
 
 @media (min-width: 800px) {
@@ -524,7 +524,7 @@ p {
   .nav-trigger {
     display: none; }
   .header {
-    background-color: #1e1e20; }
+    background-color: #001529; }
     .header .header-link .header-title {
       text-align: left;
       padding: 0 20px; }
@@ -542,16 +542,16 @@ p {
         margin: 0 20px;
         -webkit-transition: margin 0.3s, padding 0.3s, -webkit-transform 0.3s;
         transition: margin 0.3s, padding 0.3s, transform 0.3s;
-        -webkit-box-shadow: 0 2px 0 0 #d9cb9e;
-        -moz-box-shadow: 0 2px 0 0 #d9cb9e;
-        box-shadow: 0 2px 0 0 #d9cb9e; }
+        -webkit-box-shadow: 0 2px 0 0 #98c3c7;
+        -moz-box-shadow: 0 2px 0 0 #98c3c7;
+        box-shadow: 0 2px 0 0 #98c3c7; }
         .nav .nav-list .nav-list-item .nav-link:hover {
           padding: 10px 6px 10px 6px;
           margin: 0 14px; }
         .nav .nav-list .nav-list-item .nav-link.current-page {
-          -webkit-box-shadow: 0 4px 0 0 #d9cb9e;
-          -moz-box-shadow: 0 4px 0 0 #d9cb9e;
-          box-shadow: 0 4px 0 0 #d9cb9e; }
+          -webkit-box-shadow: 0 5px 0 0 #98c3c7;
+          -moz-box-shadow: 0 5px 0 0 #98c3c7;
+          box-shadow: 0 5px 0 0 #98c3c7; }
   .container {
     padding-top: 130px; } }
 
@@ -559,7 +559,7 @@ p {
   .nav-bar-wrapper {
     position: fixed;
     width: 100%;
-    background-color: #1e1e20;
+    background-color: #001529;
     height: 121px; }
   .nav-bar {
     width: 1000px;
@@ -581,3 +581,19 @@ p {
     margin-right: 3%;
     display: inline-block;
     vertical-align: top; } }
+
+.pie-chart {
+  width: 800px;
+  height: 500px;
+  margin: 0 auto;
+  font-size: 1.2em; }
+
+svg {
+  width: 100%;
+  height: 100%; }
+
+polyline {
+  opacity: 0.3;
+  stroke: black;
+  stroke-width: 2px;
+  fill: none; }

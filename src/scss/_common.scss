@@ -1,6 +1,6 @@
 html {
   font-family: $font-stack;
-  color: $black-dusk;
+  color: $pitch-blue;
   background-color: $backdrop;
 }
 
@@ -18,9 +18,9 @@ html, body {
 }
 
 a {
-  color: $burnt-orange;
+  color: $rhs-blue;
   text-decoration: none;
-  @include prefix(box-shadow, 0 2px 0 0 $burnt-orange, webkit moz);
+  @include prefix(box-shadow, 0 2px 0 0 $rhs-blue, webkit moz);
 }
 
 p {
@@ -31,7 +31,7 @@ p {
   margin: 8px 0;
   margin-left: 10px;
   padding: 8px 14px;
-  @include prefix(box-shadow, -10px 0 0 0 $burnt-orange, webkit moz);
+  @include prefix(box-shadow, -10px 0 0 0 $rhs-blue, webkit moz);
 }
 
 .secondary-header {
@@ -39,21 +39,21 @@ p {
   margin-left: 16px;
   margin-top: 32px;
   padding: 8px 14px 0 14px;
-  @include prefix(box-shadow, -16px 0 0 0 $cardstock, webkit moz);
+  @include prefix(box-shadow, -16px 0 0 0 $light-blue, webkit moz);
 }
 
 .tertiary-header {
   margin: 8px 0;
   margin-left: 22px;
   padding: 8px 18px 0 18px;
-  @include prefix(box-shadow, -22px 0 0 0 $navy-blue, webkit moz);
+  @include prefix(box-shadow, -22px 0 0 0 $sky-blue, webkit moz);
 }
 
 .download {
   padding: 0;
   font-size: 1.2em;
   display: inline-block;
-  @include prefix(box-shadow, 0 0 0 2px $burnt-orange, webkit moz);
+  @include prefix(box-shadow, 0 0 0 2px $rhs-blue, webkit moz);
 
   a {
     display: inline-block;
@@ -64,15 +64,15 @@ p {
 
     &:hover {
       color: $backdrop;
-      background-color: $burnt-orange;
+      background-color: $rhs-blue;
     }
   }
 }
 
 .date {
   display: inline-block;
-  color: $navy-blue;
-  border: 2px solid rgba($navy-blue, 0.5);
+  color: $sky-blue;
+  border: 2px solid rgba($sky-blue, 0.5);
   border-radius: 20px;
   padding: 4px 16px;
   margin: 0;
@@ -100,7 +100,7 @@ p {
     padding: 60px 0 0 0;
 
     background-image: linear-gradient(to bottom, transparent, $backdrop);
-    border-bottom: 2px solid $burnt-orange;
+    border-bottom: 2px solid $rhs-blue;
 
     .read-more-link {
     }
@@ -110,7 +110,7 @@ p {
 
 .nav-bar {
   width: 100%;
-  background-color: $black-dusk;
+  background-color: $pitch-blue;
 }
 
 .header {
@@ -118,7 +118,7 @@ p {
 
   .header-link {
     text-decoration: none;
-    color: $cardstock;
+    color: $light-blue;
   }
 
   .header-title {
@@ -130,10 +130,10 @@ p {
 }
 
 .nav-trigger {
-  background-color: $grey;
+  background-color: $turquoise;
   display: block;
   font-size: 1.2em;
-  color: $cardstock;
+  color: $light-blue;
   text-align: center;
   text-decoration: none;
   padding: 10px 0;
@@ -148,28 +148,28 @@ p {
 
     .nav-list-item {
       list-style-type: none;
-      background-color: $navy-blue;
-      font-size: 1.2em;
+      background-color: $sky-blue;
+      font-size: 1.3em;
       text-align: center;
       // padding: 10px 0;
-      border-top: 2px solid $black-dusk;
+      border-top: 2px solid $pitch-blue;
 
       .nav-link {
         box-shadow: none;
         display: block;
-        // @include prefix(box-shadow, 0 2px 0 0 $cardstock, webkit moz);
+        // @include prefix(box-shadow, 0 2px 0 0 $light-blue, webkit moz);
         text-decoration: none;
-        color: $cardstock;
+        color: $light-blue;
         padding: 10px 0;
 
         &:active,
         &:focus,
         &:hover {
-          background-color: $black-dusk;
+          background-color: $pitch-blue;
         }
 
         &.current-page {
-          background-color: $black-dusk;
+          background-color: $pitch-blue;
         }
       }
     }
@@ -177,11 +177,11 @@ p {
 }
 
 .wrapper {
-  // border-top: 8px solid $burnt-orange;
+  // border-top: 8px solid $rhs-blue;
   padding: 30px 0 20px;
 
   &:not(:first-child) {
-    @include prefix(box-shadow, 0 -2px 0 0 $burnt-orange, webkit moz);
+    @include prefix(box-shadow, 0 -2px 0 0 $rhs-blue, webkit moz);
   }
 }
 
@@ -194,13 +194,13 @@ p {
 
 .footer {
   height: 40px;
-  background-color: $black-dusk;
+  background-color: $pitch-blue;
   margin-top: 40px;
   text-align: center;
   padding: 20px 0;
 
   .footer-text {
-    color: $cardstock;
+    color: $light-blue;
     margin: 0;
   }
 
@@ -230,7 +230,7 @@ p {
   }
 
   .header {
-    background-color: $black-dusk;
+    background-color: $pitch-blue;
 
     .header-link {
 
@@ -259,7 +259,7 @@ p {
           margin: 0 20px;
           -webkit-transition: margin 0.3s, padding 0.3s, -webkit-transform 0.3s;
           transition: margin 0.3s, padding 0.3s, transform 0.3s;
-          @include prefix(box-shadow, 0 2px 0 0 $cardstock, webkit moz);
+          @include prefix(box-shadow, 0 2px 0 0 $light-blue, webkit moz);
 
           &:hover {
             padding: 10px 6px 10px 6px;
@@ -267,7 +267,7 @@ p {
           }
 
           &.current-page {
-            @include prefix(box-shadow, 0 4px 0 0 $cardstock, webkit moz);
+            @include prefix(box-shadow, 0 5px 0 0 $light-blue, webkit moz);
           }
         }
       }
@@ -285,7 +285,7 @@ p {
   .nav-bar-wrapper {
     position: fixed;
     width: 100%;
-    background-color: $black-dusk;
+    background-color: $pitch-blue;
     height: 121px;
 
   }
