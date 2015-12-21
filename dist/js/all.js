@@ -107,18 +107,90 @@ $(document).ready(function() {
   );
 
 });
+$(document).ready(function() {
+
+var junior = (5/8),
+    major = (35/56),
+    game = (12/24);
+
+var data = [
+  {label: "Cornell University Junior", detail: "5 of 8 semesters", value: junior},
+  {label: "Computer Science Major", detail: "35 of 56 core credits", value: major}, // 35 out of 56 credits
+  {label: "Game Design Minor", detail: "12 of 24 credits", value: game}
+];
+
+var blueShades = function(d) {
+  frac = d.value; // get fraction
+  return d3.hsl(200, frac, 0.3);
+};
+
+var dataset = [junior, major, game];
+
+var width = 760,
+    barHeight = 80;
+
+var x = d3.scale.linear()
+    .range([0, width]);
+
+var chart = d3.select(".bar-chart")
+    .append("svg");
+    // .attr("width", width);
+
+chart.attr("height", barHeight * data.length);
+
+var bar = chart.selectAll("g")
+    .data(data)
+    .enter().append("g")
+    // .attr("class", "bar-chart-item")
+    .attr("transform", function(d, i) { return "translate(0," + i * barHeight + ")"; });
+
+
+bar.append("rect")
+    .attr("fill", "#dadada")
+    .attr("width", 760)
+    .attr("rx", 30)
+    .attr("ry", 30)
+    .attr("height", barHeight - 15);
+
+bar.append("rect")
+    .attr("fill", function(d) { return blueShades(d); })
+    .attr("width", function(d) { return x(d.value); })
+    .attr("rx", 30)
+    .attr("ry", 30)
+    .attr("height", barHeight - 15);
+
+bar.append("text")
+    .attr("class", "completed")
+    .attr("x", function(d) { return x(d.value) - 20; })
+    .attr("y", barHeight / 2)
+    .attr("dy", "0em")
+    .attr("text-anchor", "end")
+    .text(function(d) { return d.label; });
+
+bar.append("text")
+    .attr("class", "percents")
+    .attr("text-anchor", "start")
+    .attr("x", function(d) { return x(d.value) + 20; })
+    .attr("y", barHeight / 2)
+    .attr("dy", "0em")
+    .text(function(d) { return d.detail; });
+      // .text(function(d) { return Math.round(d.value * 100) + "% completed"; });
+});
+$(document).ready(function() {
 // Thanks to http://bl.ocks.org/dbuezas/9306799
 // and http://bl.ocks.org/mbostock/32bd93b1cc0fbccc9bf9
 
+// based on hours per two weeks
+
 var data = [
-  {label: 'Marching Band', count: 5},
-  {label: 'Coding Projects', count: 5},
-  {label: 'Napping', count: 3},
+  {label: 'Coding For Fun', count: 4},
   {label: 'Painting', count: 4},
-  {label: 'Gaming', count: 2},
-  {label: 'Campus Events', count: 3},
-  {label: 'Quora', count: 3},
-  {label: 'Spotify', count: 4}
+  {label: 'Gaming', count: 3},
+  {label: 'Napping', count: 4},
+  {label: 'Band', count: 8},
+  {label: 'Local Events', count: 3},
+  {label: 'Quora', count: 2},
+  {label: 'Spotify', count: 6}
 ];
 
 
@@ -130,7 +202,7 @@ var blueShades = function(d) {
   // rgb(0,150,130) is our base (angle 0)
   frac = d.startAngle / (2 * Math.PI); // get fraction
   amt = frac * 225;
-  return d3.rgb(30 + amt, 149, 150);
+  return d3.rgb(30 + amt, 150, 150);
 };
 
 var width = 800,
@@ -141,7 +213,7 @@ var outerRadius = height / 2 - 20,
     innerRadius = outerRadius / 3;
 
 var pie = d3.layout.pie()
-    // .sort(null)
+    .sort(null) // disables the sort by size
     .padAngle(0.025)
     .value(function(d) {
       return d.count;
@@ -183,7 +255,7 @@ svg.select(".slices").selectAll("path")
     .each(function(d) { d.outerRadius = outerRadius - 20; })
     .attr("d", arc)
     .style("fill", function(d) {
-        console.log(d);
+        // console.log(d);
         return blueShades(d);
         // return color(d.data.count);
       })
@@ -244,141 +316,245 @@ line.attr("points", function(d) {
       return [innerArc.centroid(d), outerArc.centroid(d), pos];
     });
 
-// var data = [
-//   {label: 'Marching Band', value: 26},
-//   {label: 'Coding Projects', value: 24},
-//   {label: 'Napping', value: 16},
-//   {label: 'Painting', value: 14},
-//   {label: 'Gaming', value: 10},
-//   {label: 'Campus Events', value: 8}
+});
+$(document).ready(function() {
+
+var margin = {top: 60, right: 20, bottom: 60, left: 40},
+    width = 960 - margin.left - margin.right,
+    height = 500 - margin.top - margin.bottom;
+
+// var formatPercent = d3.format(".0%");
+var parseDate = d3.time.format("%m/%Y").parse;
+
+var x = d3.scale.ordinal()
+    .rangeRoundBands([0, width], 0.1);
+
+var y = d3.scale.linear()
+    .range([height, 0]);
+
+var xAxis = d3.svg.axis()
+    .scale(x)
+    .orient("bottom");
+
+var yAxis = d3.svg.axis()
+    .scale(y)
+    .orient("left");
+    // .tickFormat();
+
+var tip = d3.tip()
+  .attr('class', 'd3-tip')
+  .offset([-10, 0])
+  .html(function(d) {
+    return d.about;
+  });
+
+var svg = d3.select(".timeline").append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+svg.call(tip);
+
+console.log('here');
+
+data =
+
+// [
+//   {letter: "A", frequency: 3},
+//   {letter: "B", frequency: 4},
+//   {letter: "C", frequency: 7},
+//   {letter: "D", frequency: 0}
 // ];
 
-// var width = 800,
-//     height = 500,
-//     radius = Math.min(width, height) / 2;
+[
+  {
+    "date":"10/2011",
+    "about":"learned animation and modeling in 3dsmax",
+    "art":1,
+    "tools":1,
+    "coding":0,
+    "happening":0
+  },
+  {
+    "date":"09/2012",
+    "about":"started photoshop, flash, after fx, illustrator",
+    "art":0,
+    "tools":1,
+    "coding":0,
+    "happening":0
+  },
+  {
+    "date":"10/2012",
+    "about":"interest in websites and computer graphics",
+    "art":1,
+    "tools":1,
+    "coding":0,
+    "happening":1
+  },
+  {
+    "date":"10/2012",
+    "about":"chose CS as major for college",
+    "art":0,
+    "tools":0,
+    "coding":0,
+    "happening":1
+  },
+  {
+    "date":"05/2013",
+    "about":"graduated from Rochester High School",
+    "art":0,
+    "tools":0,
+    "coding":0,
+    "happening":1
+  },
+  {
+    "date":"08/2013",
+    "about":"entered Cornell University",
+    "art":0,
+    "tools":0,
+    "coding":0,
+    "happening":1
+  },
+  {
+    "date":"08/2013",
+    "about":"took first coding class in Python",
+    "art":0,
+    "tools":0,
+    "coding":1,
+    "happening":1
+  },
+  {
+    "date":"01/2014",
+    "about":"coding class with Java",
+    "art":0,
+    "tools":0,
+    "coding":1,
+    "happening":0
+  },
+  {
+    "date":"02/2014",
+    "about":"started blender and maya?",
+    "art":0,
+    "tools":1,
+    "coding":0,
+    "happening":0
+  },
+  {
+    "date":"06/2014",
+    "about":"created first website",
+    "art":1,
+    "tools":0,
+    "coding":1,
+    "happening":1
+  },
+  {
+    "date":"08/2014",
+    "about":"Siggraph 2014 in vancouver",
+    "art":1,
+    "tools":1,
+    "coding":0,
+    "happening":1
+  },
+  {
+    "date":"08/2014",
+    "about":"first computer graphics class",
+    "art":0,
+    "tools":0,
+    "coding":1,
+    "happening":0
+  },
+  {
+    "date":"08/2014",
+    "about":"coding class with Ocaml",
+    "art":0,
+    "tools":0,
+    "coding":1,
+    "happening":0
+  },
+  {
+    "date":"01/2015",
+    "about":"coding class with C",
+    "art":0,
+    "tools":0,
+    "coding":1,
+    "happening":0
+  },
+  {
+    "date":"01/2015",
+    "about":"took first painting class; used acrylic",
+    "art":1,
+    "tools":0,
+    "coding":0,
+    "happening":1
+  },
+  {
+    "date":"05/2015",
+    "about":"interned at LinkedIn; webdev",
+    "art":1,
+    "tools":0,
+    "coding":1,
+    "happening":1
+  },
+  {
+    "date":"08/2015",
+    "about":"Siggraph 2015 in LA",
+    "art":1,
+    "tools":1,
+    "coding":0,
+    "happening":0
+  },
+  {
+    "date":"08/2015",
+    "about":"painting class; used watercolor",
+    "art":1,
+    "tools":0,
+    "coding":0,
+    "happening":1
+  },
+  {
+    "date":"08/15",
+    "about":"first machine learning class with MatLab",
+    "art":0,
+    "tools":0,
+    "coding":1,
+    "happening":0
+  }
+];
 
-// var outerRadius = height / 2 - 10,
-//     innerRadius = outerRadius / 3;
 
-// var pie = d3.layout.pie()
-//   .sort(null)
-//   .padAngle(0.025)
-//   .value(function(d) {
-//     return d.value;
-//   });
+x.domain(data.map(function(d) { return d.date; }));
+y.domain([0, d3.max(data, function(d) { return d.happening; })]);
 
-// var svg = d3.select(".pie-chart")
-//   .append("svg")
-//   .append("g")
-//   .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+svg.append("g")
+    .attr("class", "x axis")
+    .attr("transform", "translate(0," + height + ")")
+    .call(xAxis);
 
-// svg.append("g")
-//   .attr("class", "slices");
-// svg.append("g")
-//   .attr("class", "labels");
-// svg.append("g")
-//   .attr("class", "lines");
+svg.append("g")
+    .attr("class", "y axis")
+    .call(yAxis)
+  .append("text")
+    .attr("transform", "rotate(-90)")
+    .attr("y", 6)
+    .attr("dy", ".71em")
+    .style("text-anchor", "end")
+    .text("Axis label");
 
-// var arc = d3.svg.arc()
-//   .outerRadius(radius * 0.8)
-//   .innerRadius(radius * 0.3);
+svg.selectAll(".bar")
+    .data(data)
+  .enter().append("rect")
+    .attr("class", "bar")
+    .attr("x", function(d) { return x(d.date); })
+    .attr("width", x.rangeBand())
+    .attr("y", function(d) { return y(d.happening); })
+    .attr("height", function(d) { return height - y(d.happening); })
+    .on('mouseover', tip.show)
+    .on('mouseout', tip.hide);
 
-// var outerArc = d3.svg.arc()
-//   .innerRadius(radius * 0.9)
-//   .outerRadius(radius * 0.9);
+function type(d) {
+  d.frequency = +d.frequency;
+  return d;
+}
 
-
-// var key = function(d){ return d.data.label; };
-
-// var color = d3.scale.ordinal()
-//   .range(['#98c3c7', '#419596', '#00657a', '#003b56', '#10294F', '#00657a',]);
-
-
-
-
-
-//   /* ------- PIE SLICES -------*/
-//   var slice = svg.select(".slices").selectAll("path.slice")
-//     .data(pie(data), key);
-
-//   console.log(slice);
-
-//   slice.enter()
-//     .insert("path")
-//     .attr("d", arc)
-//     .style("fill", function(d) { return color(d.data.label); })
-//     .attr("class", "slice");
-
-//   slice
-//     .transition()
-//     .attrTween("d", function(d) {
-//       return function(t) {
-//         return arc(d);
-//       };
-//     });
-
-
-//    // ------- TEXT LABELS -------
-
-//   var text = svg.select(".labels").selectAll("text")
-//     .data(pie(data), key);
-
-//   text.enter()
-//     .append("text")
-//     .attr("dy", ".35em")
-//     .text(function(d) {
-//       return d.data.label;
-//     });
-
-//   function midAngle(d){
-//     return d.startAngle + (d.endAngle - d.startAngle)/2;
-//   }
-
-//   text.transition().duration(1000)
-//     .attrTween("transform", function(d) {
-//       this._current = this._current || d;
-//       var interpolate = d3.interpolate(this._current, d);
-//       this._current = interpolate(0);
-//       return function(t) {
-//         var d2 = interpolate(t);
-//         var pos = outerArc.centroid(d2);
-//         pos[0] = radius * (midAngle(d2) < Math.PI ? 1 : -1);
-//         return "translate("+ pos +")";
-//       };
-//     })
-//     .styleTween("text-anchor", function(d){
-//       this._current = this._current || d;
-//       var interpolate = d3.interpolate(this._current, d);
-//       this._current = interpolate(0);
-//       return function(t) {
-//         var d2 = interpolate(t);
-//         return midAngle(d2) < Math.PI ? "start":"end";
-//       };
-//     });
-
-//   text.exit()
-//     .remove();
-
-//   /* ------- SLICE TO TEXT POLYLINES -------*/
-
-//   var polyline = svg.select(".lines").selectAll("polyline")
-//     .data(pie(data), key);
-
-//   polyline.enter()
-//     .append("polyline");
-
-//   polyline.transition().duration(1000)
-//     .attrTween("points", function(d){
-//       this._current = this._current || d;
-//       var interpolate = d3.interpolate(this._current, d);
-//       this._current = interpolate(0);
-//       return function(t) {
-//         var d2 = interpolate(t);
-//         var pos = outerArc.centroid(d2);
-//         pos[0] = radius * 0.95 * (midAngle(d2) < Math.PI ? 1 : -1);
-//         return [arc.centroid(d2), outerArc.centroid(d2), pos];
-//       };
-//     });
-
-//   polyline.exit()
-//     .remove();
+});

@@ -461,7 +461,7 @@ p {
     margin: 0; }
 
 .nav-trigger {
-  background-color: #419596;
+  background-color: #003b56;
   display: block;
   font-size: 1.2em;
   color: #98c3c7;
@@ -582,6 +582,29 @@ p {
     display: inline-block;
     vertical-align: top; } }
 
+.bar-chart {
+  font-size: 1.2em;
+  padding: 20px 0;
+  width: 760px;
+  margin: 0 auto;
+  display: none; }
+  .bar-chart .completed {
+    fill: white; }
+  .bar-chart .percents {
+    fill: #001529; }
+
+@media (min-width: 800px) {
+  .about-me-blurb {
+    display: none; }
+  .bar-chart {
+    display: block; } }
+
+.pie-chart {
+  display: none; }
+
+.pie-chart-list {
+  display: block; }
+
 .pie-chart {
   width: 800px;
   height: 500px;
@@ -597,3 +620,48 @@ polyline {
   stroke: black;
   stroke-width: 2px;
   fill: none; }
+
+@media (min-width: 800px) {
+  .pie-chart {
+    display: block; }
+  .pie-chart-list {
+    display: none; } }
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges; }
+
+.bar {
+  fill: #003b56; }
+
+.bar:hover {
+  fill: #419596; }
+
+.d3-tip {
+  line-height: 1.2;
+  font-weight: bold;
+  padding: 12px 16px;
+  background: #001529;
+  color: #fff;
+  border-radius: 2px;
+  position: relative;
+  text-align: center; }
+
+/* Creates a small triangle extender for the tooltip */
+.d3-tip:after,
+.d3-top:before {
+  top: 100%;
+  left: 50%;
+  content: " ";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: solid transparent; }
+
+/* Style northward tooltips differently */
+.d3-tip.n:after {
+  margin: -1px 0 0 0;
+  top: 100%;
+  left: 0; }

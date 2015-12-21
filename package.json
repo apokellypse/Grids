@@ -2,7 +2,7 @@
   "name": "Grids",
   "version": "0.0.0",
   "description": "A website inspired by squares.",
-  "main": "Gruntfile.js",
+  "main": "gulpfile.js",
   "dependencies": {},
   "devDependencies": {
     "gulp": "~3.9.0",

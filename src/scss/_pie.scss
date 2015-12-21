@@ -1,4 +1,12 @@
 .pie-chart {
+  display: none;
+}
+
+.pie-chart-list {
+  display: block;
+}
+
+.pie-chart {
   width: 800px;
   height: 500px;
   // padding: 50px 0;
@@ -16,4 +24,15 @@ polyline {
   stroke: black;
   stroke-width: 2px;
   fill: none;
+}
+
+@media (min-width: 800px) {
+
+  .pie-chart {
+    display: block;
+  }
+
+  .pie-chart-list {
+    display: none;
+  }
 }

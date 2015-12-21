@@ -1,15 +1,18 @@
+$(document).ready(function() {
 // Thanks to http://bl.ocks.org/dbuezas/9306799
 // and http://bl.ocks.org/mbostock/32bd93b1cc0fbccc9bf9
 
+// based on hours per two weeks
+
 var data = [
-  {label: 'Marching Band', count: 5},
-  {label: 'Coding Projects', count: 5},
-  {label: 'Napping', count: 3},
+  {label: 'Coding For Fun', count: 4},
   {label: 'Painting', count: 4},
-  {label: 'Gaming', count: 2},
-  {label: 'Campus Events', count: 3},
-  {label: 'Quora', count: 3},
-  {label: 'Spotify', count: 4}
+  {label: 'Gaming', count: 3},
+  {label: 'Napping', count: 4},
+  {label: 'Band', count: 8},
+  {label: 'Local Events', count: 3},
+  {label: 'Quora', count: 2},
+  {label: 'Spotify', count: 6}
 ];
 
 
@@ -21,7 +24,7 @@ var blueShades = function(d) {
   // rgb(0,150,130) is our base (angle 0)
   frac = d.startAngle / (2 * Math.PI); // get fraction
   amt = frac * 225;
-  return d3.rgb(30 + amt, 149, 150);
+  return d3.rgb(30 + amt, 150, 150);
 };
 
 var width = 800,
@@ -32,7 +35,7 @@ var outerRadius = height / 2 - 20,
     innerRadius = outerRadius / 3;
 
 var pie = d3.layout.pie()
-    // .sort(null)
+    .sort(null) // disables the sort by size
     .padAngle(0.025)
     .value(function(d) {
       return d.count;
@@ -74,7 +77,7 @@ svg.select(".slices").selectAll("path")
     .each(function(d) { d.outerRadius = outerRadius - 20; })
     .attr("d", arc)
     .style("fill", function(d) {
-        console.log(d);
+        // console.log(d);
         return blueShades(d);
         // return color(d.data.count);
       })
@@ -134,3 +137,5 @@ line.attr("points", function(d) {
       pos[0] = radius * (midAngle(d) < Math.PI ? 1.05 : -1.05);
       return [innerArc.centroid(d), outerArc.centroid(d), pos];
     });
+
+});
