@@ -399,6 +399,11 @@ p {
   -moz-box-shadow: -22px 0 0 0 #00657a;
   box-shadow: -22px 0 0 0 #00657a; }
 
+.loading {
+  font-size: 2em;
+  margin: 8px 0;
+  margin-top: 32px; }
+
 .download {
   padding: 0;
   font-size: 1.2em;
@@ -626,42 +631,3 @@ polyline {
     display: block; }
   .pie-chart-list {
     display: none; } }
-
-.axis path,
-.axis line {
-  fill: none;
-  stroke: #000;
-  shape-rendering: crispEdges; }
-
-.bar {
-  fill: #003b56; }
-
-.bar:hover {
-  fill: #419596; }
-
-.d3-tip {
-  line-height: 1.2;
-  font-weight: bold;
-  padding: 12px 16px;
-  background: #001529;
-  color: #fff;
-  border-radius: 2px;
-  position: relative;
-  text-align: center; }
-
-/* Creates a small triangle extender for the tooltip */
-.d3-tip:after,
-.d3-top:before {
-  top: 100%;
-  left: 50%;
-  content: " ";
-  position: absolute;
-  width: 0;
-  height: 0;
-  border: solid transparent; }
-
-/* Style northward tooltips differently */
-.d3-tip.n:after {
-  margin: -1px 0 0 0;
-  top: 100%;
-  left: 0; }

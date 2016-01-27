@@ -49,6 +49,12 @@ p {
   @include prefix(box-shadow, -22px 0 0 0 $sky-blue, webkit moz);
 }
 
+.loading {
+  font-size: 2em;
+  margin: 8px 0;
+  margin-top: 32px;
+}
+
 .download {
   padding: 0;
   font-size: 1.2em;

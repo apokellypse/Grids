@@ -22,7 +22,7 @@
     <a class="js-nav-trigger nav-trigger" href="#">+ expand menu +</a>
 
     <!-- turn into template -->
-    <nav class="nav hidden">
+    <nav class="nav">
       <ul class="nav-list">
 
         <li class="nav-list-item">
@@ -45,7 +45,7 @@
 </div>
 
 <article class="container js-blog-template">
-
+  <p class="loading">Loading Posts...</p>
   <script class="js-blog-script" type="text/x-handlebars-template">
     <section class="wrapper">
       <h1 class="accent-header">Wordpress Blog: Most Recent Posts</h1>
@@ -72,7 +72,9 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="http://cdn.jsdelivr.net/handlebarsjs/3.0.3/handlebars.min.js"></script>
-<script src="js/all.js"></script>
+<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script src="js/common.js"></script>
+<script src="js/blog.js"></script>
 
 
 

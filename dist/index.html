@@ -7,8 +7,6 @@
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
   <link rel="stylesheet" type="text/css" href="css/style.css">
-  <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-  <script src="https://raw.githubusercontent.com/Caged/d3-tip/master/index.js"></script>
   <title>Kelly Yu</title>
 </head>
 <body>
@@ -24,7 +22,7 @@
     <a class="js-nav-trigger nav-trigger" href="#">+ expand menu +</a>
 
     <!-- turn into template -->
-    <nav class="nav hidden">
+    <nav class="nav">
       <ul class="nav-list">
 
         <li class="nav-list-item">
@@ -76,97 +74,17 @@
     <!-- <div class="pie-chart2"></div> -->
   </section>
 
- <!--  <section class="timeline-wrapper wrapper">
-    <h1 class="timeline-wrapper accent-header">My Journey</h1>
-    <div class="timeline"></div>
-
-
-    <div class="two-col year">
-
-      <h2 class="secondary-header">2011</h2>
-      <ul class="vip-list">
-        <li class="vip-list-item">
-          Learned Animation and Modeling in 3ds Max
-        </li>
-      </ul>
-
-      <h2 class="secondary-header">2012</h2>
-      <ul class="vip-list">
-        <li class="vip-list-item">
-          Started using Photoshop, Flash, After FX, Illustrator
-        </li>
-      </ul>
-
-      <h2 class="secondary-header">2013</h2>
-      <ul class="vip-list">
-        <li class="vip-list-item">
-          Became interested in websites and computer graphics
-        </li>
-        <li class="vip-list-item">
-          Began to consider Computer Science as major
-        </li>
-        <li class="vip-list-item">
-          Graduated High School
-        </li>
-        <li class="vip-list-item">
-          Entered Cornell University
-        </li>
-        <li class="vip-list-item">
-          Took first coding class in Python
-        </li>
-      </ul>
-
+  <section class="wrapper">
+    <h1 class="accent-header">Timeline</h1>
+    <div class="js-timeline-template">
+      <script class="js-timeline-script" type="text/x-handlebars-template">
+        {{#events}}
+          <h2 class="secondary-header">{{title}}</h2>
+          <p class="date js-unformatted">{{date}}</p>
+        {{/events}}
+      </script>
     </div>
-
-    <div class="two-col year">
-      <h2 class="secondary-header">2014</h2>
-      <ul class="vip-list">
-        <li class="vip-list-item">
-          Learned Java
-        </li>
-        <li class="vip-list-item">
-          Began to use Maya and Blender for 3d modeling
-        </li>
-        <li class="vip-list-item">
-          Created first website
-        </li>
-        <li class="vip-list-item">
-          Attended SIGGRAPH 2014 in Vancouver
-        </li>
-        <li class="vip-list-item">
-          Took introductory Computer Graphics class
-        </li>
-        <li class="vip-list-item">
-          Learned some OCaml
-        </li>
-      </ul>
-
-      <h2 class="secondary-header">2015</h2>
-      <ul class="vip-list">
-        <li class="vip-list-item">
-          Learned some C
-        </li>
-        <li class="vip-list-item">
-          First time painting in acrylic
-        </li>
-        <li class="vip-list-item">
-          Interned as a Web Developer at LinkedIn
-        </li>
-        <li class="vip-list-item">
-          Attended SIGGRAPH 2015 in LA
-        </li>
-        <li class="vip-list-item">
-          First time painting in watercolor
-        </li>
-        <li class="vip-list-item">
-          Took introductory Machine Learning class
-        </li>
-
-      </ul>
-
-    </div>
-
-  </section> -->
+  </section>
 
 </article>
 
@@ -178,7 +96,9 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="http://cdn.jsdelivr.net/handlebarsjs/3.0.3/handlebars.min.js"></script>
-<script src="js/all.js"></script>
+<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script src="js/common.js"></script>
+<script src="js/index.js"></script>
 
 
 </body>

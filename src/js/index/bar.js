@@ -1,4 +1,6 @@
-$(document).ready(function() {
+(function(exports) {
+// $(document).ready(function() {
+console.log('bar.js');
 
 var junior = (5/8),
     major = (35/56),
@@ -66,4 +68,6 @@ bar.append("text")
     .attr("dy", "0em")
     .text(function(d) { return d.detail; });
       // .text(function(d) { return Math.round(d.value * 100) + "% completed"; });
-});
+// });
+
+})(this.bar = {});
