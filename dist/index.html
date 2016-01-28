@@ -73,14 +73,20 @@
     <div class="pie-chart"></div>
     <!-- <div class="pie-chart2"></div> -->
   </section>
-
-  <section class="wrapper">
+    <!-- inspired by https://codyhouse.co/demo/vertical-timeline/index.html -->
+  <section class="timeline-wrapper wrapper">
     <h1 class="accent-header">Timeline</h1>
     <div class="js-timeline-template">
       <script class="js-timeline-script" type="text/x-handlebars-template">
         {{#events}}
-          <h2 class="secondary-header">{{title}}</h2>
-          <p class="date js-unformatted">{{date}}</p>
+          <div class="timeline-block">
+            <div class="timeline-content">
+              <h2 class="secondary-header">{{title}}</h2>
+            </div>
+            <div class="timeline-bubble">
+              <div class="date js-unformatted">{{date}}</div>
+            </div>
+          </div>
         {{/events}}
       </script>
     </div>
