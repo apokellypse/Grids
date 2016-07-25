@@ -16,7 +16,7 @@
   <div class="nav-bar">
 
     <header class="header">
-      <a class="header-link" href="index.html"><h1 class="header-title">Kelly Yu</h1></a>
+      <h1 class="header-title"><a class="header-link" href="index.html">Kelly Yu</a></h1>
     </header>
 
     <a class="js-nav-trigger nav-trigger" href="#">+ expand menu +</a>
@@ -52,11 +52,15 @@
       <p><a target="_blank" href="https://apokellypse.wordpress.com/">Visit the complete blog!</a></p>
 
     {{#posts}}
-      <div class="two-col abridged">
-        <h2 class="secondary-header">{{title}}</h2>
-        <p class="date js-unformatted">{{date}}</p>
-        {{{content}}}
-        <p class="read-more"><a target="_blank" class="read-more-link" href="{{URL}}">Read More</a></p>
+      <div class="abridged">
+        <div class="blog-header">
+          <h2 class="secondary-header">{{{title}}}</h2>
+          <p class="date js-unformatted">{{date}}</p>
+        </div>
+        <div class="blog-content">
+          <div class="blog-p">{{{content}}}</div>
+          <div class="read-more"><a target="_blank" class="read-more-link js-blog-expand" href="{{URL}}">Read More</a></div>
+        </div>
       </div>
     {{/posts}}
     </section>

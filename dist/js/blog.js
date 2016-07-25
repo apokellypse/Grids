@@ -9,9 +9,9 @@
   var SELECTORS = {
     BLOG: '.js-blog-template',
     BLOG_SCRIPT: '.js-blog-script',
-    PLS_FORMAT: '.js-unformatted'
+    PLS_FORMAT: '.js-unformatted',
+    BLOG_EXPAND: ".js-blog-expand"
   };
-
 
   var formatDate = function(dateObj) {
     // var dateObj = new Date('2015-08-18T17:44:54+00:00');
@@ -25,6 +25,10 @@
 
     return dateList[day] + ', ' + monthList[month] + ' ' + date + ', ' + year;
   };
+
+  $(SELECTORS.BLOG_EXPAND).on("click", function() {
+    
+  });
 
   var checkDates = function() {
     var dateArray = $(SELECTORS.PLS_FORMAT);
@@ -45,6 +49,7 @@
   var insertBlog = function(data) {
     // console.log(data);
     // console.log(data.posts[0].title);
+    console.log(data.posts[0]);
 
     var source = $(SELECTORS.BLOG_SCRIPT).html();
     var template = Handlebars.compile(source);
@@ -52,6 +57,8 @@
 
     checkDates();
   };
+
+  console.log(insertBlog);
 
   // get stuff from wordpress
   $.get(

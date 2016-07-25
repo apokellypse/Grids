@@ -238,7 +238,8 @@ select {
  *    `input` and others.
  */
 button,
-html input[type="button"], input[type="reset"],
+html input[type="button"],
+input[type="reset"],
 input[type="submit"] {
   -webkit-appearance: button;
   /* 2 */
@@ -365,11 +366,11 @@ html, body {
   height: 100%; }
 
 a {
-  color: #003b56;
+  color: #00657a;
   text-decoration: none;
-  -webkit-box-shadow: 0 2px 0 0 #003b56;
-  -moz-box-shadow: 0 2px 0 0 #003b56;
-  box-shadow: 0 2px 0 0 #003b56; }
+  -webkit-box-shadow: 0 2px 0 0 #00657a;
+  -moz-box-shadow: 0 2px 0 0 #00657a;
+  box-shadow: 0 2px 0 0 #00657a; }
 
 p {
   padding-left: 24px; }
@@ -425,8 +426,8 @@ p {
 
 .date {
   display: inline-block;
-  color: #00657a;
-  border: 2px solid rgba(0, 101, 122, 0.5);
+  color: #003b56;
+  border: 2px solid rgba(0, 59, 86, 0.5);
   border-radius: 20px;
   padding: 4px 16px;
   margin: 0;
@@ -437,18 +438,8 @@ p {
   display: none; }
 
 .abridged {
-  height: 400px;
   position: relative;
-  overflow: hidden; }
-  .abridged .read-more {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    margin: 0;
-    padding: 60px 0 0 0;
-    background-image: linear-gradient(to bottom, transparent, #f2f2f2);
-    border-bottom: 2px solid #003b56; }
+  margin-bottom: 40px; }
 
 .nav-bar {
   width: 100%;
@@ -458,7 +449,8 @@ p {
   padding: 20px 0; }
   .header .header-link {
     text-decoration: none;
-    color: #98c3c7; }
+    color: #98c3c7;
+    box-shadow: none; }
   .header .header-title {
     text-align: center;
     font-size: 4em;
@@ -490,9 +482,7 @@ p {
       text-decoration: none;
       color: #98c3c7;
       padding: 10px 0; }
-      .nav .nav-list .nav-list-item .nav-link:active,
-      .nav .nav-list .nav-list-item .nav-link:focus,
-      .nav .nav-list .nav-list-item .nav-link:hover {
+      .nav .nav-list .nav-list-item .nav-link:active, .nav .nav-list .nav-list-item .nav-link:focus, .nav .nav-list .nav-list-item .nav-link:hover {
         background-color: #001529; }
       .nav .nav-list .nav-list-item .nav-link.current-page {
         background-color: #001529; }
@@ -516,10 +506,40 @@ p {
   text-align: center;
   padding: 20px 0; }
   .footer .footer-text {
+    padding-left: 0;
     color: #98c3c7;
     margin: 0; }
 
+.abridged .blog-content {
+  margin-top: 20px;
+  padding-top: 10px;
+  background: #fff; }
+  .abridged .blog-content .read-more {
+    text-align: center;
+    margin-top: 20px; }
+    .abridged .blog-content .read-more .read-more-link {
+      background: #00657a;
+      padding: 10px 0;
+      display: block;
+      box-shadow: none;
+      color: #fff; }
+      .abridged .blog-content .read-more .read-more-link:hover {
+        background: #003b56; }
+  .abridged .blog-content .blog-p {
+    height: 400px;
+    overflow: hidden; }
+  .abridged .blog-content p {
+    padding: 0 24px; }
+
 @media (min-width: 800px) {
+  .abridged .blog-header {
+    vertical-align: top;
+    display: inline-block;
+    width: 30%; }
+  .abridged .blog-content {
+    display: inline-block;
+    width: 65%;
+    color: rgba(0, 0, 0, 0.7); }
   .nav-bar-wrapper {
     z-index: 1; }
   .nav-bar {
@@ -530,7 +550,7 @@ p {
     display: none; }
   .header {
     background-color: #001529; }
-    .header .header-link .header-title {
+    .header .header-title {
       text-align: left;
       padding: 0 20px; }
   .nav {
@@ -601,50 +621,6 @@ p {
     height: 100%;
     width: 4px;
     background: #003b56; }
-
-.timeline-block {
-  position: relative;
-  margin: 20px 0;
-  clear: both;
-  overflow: auto; }
-  .timeline-block .timeline-content {
-    position: relative;
-    padding: 1em;
-    width: 46%; }
-    .timeline-block .timeline-content .secondary-header {
-      -webkit-box-shadow: 0 4px 0 0 #003b56;
-      -moz-box-shadow: 0 4px 0 0 #003b56;
-      box-shadow: 0 4px 0 0 #003b56;
-      border-radius: 4px;
-      color: #fff;
-      background: #419596;
-      margin: 0;
-      padding: 12px 24px; }
-  .timeline-block:nth-child(4n+3) .timeline-content,
-  .timeline-block:nth-child(4n+4) .timeline-content {
-    float: right; }
-
-.timeline-bubble {
-  position: absolute;
-  top: 0;
-  left: 50%; }
-  .timeline-bubble .date {
-    color: #fff;
-    background: #003b56;
-    border-color: #003b56;
-    box-shadow: 0 0 0 4px #fff, 0 2px 0 #00657a inset, 0 3px 0 4px #419596;
-    font-size: 1.4em;
-    line-height: 1.1em;
-    text-align: center;
-    margin: 0;
-    padding: 12px;
-    display: table-cell;
-    vertical-align: middle;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    position: relative;
-    left: -50%; }
 
 .bar-chart {
   font-size: 1.2em;

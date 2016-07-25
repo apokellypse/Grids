@@ -21,7 +21,7 @@ function getFolders(dir) {
 }
 
 gulp.task('lint', function() {
-	return gulp.src('src/js/*.js')
+	return gulp.src('src/js/*/*.js')
 		.pipe(jshint())
 		.pipe(jshint.reporter('default'));
 });

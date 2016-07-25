@@ -18,9 +18,9 @@ html, body {
 }
 
 a {
-  color: $rhs-blue;
+  color: $sky-blue;
   text-decoration: none;
-  @include prefix(box-shadow, 0 2px 0 0 $rhs-blue, webkit moz);
+  @include prefix(box-shadow, 0 2px 0 0 $sky-blue, webkit moz);
 }
 
 p {
@@ -77,8 +77,8 @@ p {
 
 .date {
   display: inline-block;
-  color: $sky-blue;
-  border: 2px solid rgba($sky-blue, 0.5);
+  color: $rhs-blue;
+  border: 2px solid rgba($rhs-blue, 0.5);
   border-radius: 20px;
   padding: 4px 16px;
   margin: 0;
@@ -92,25 +92,8 @@ p {
 }
 
 .abridged {
-  height: 400px;
   position: relative;
-  overflow: hidden;
-
-  .read-more {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    // text-align: center;
-    margin: 0;
-    padding: 60px 0 0 0;
-
-    background-image: linear-gradient(to bottom, transparent, $backdrop);
-    border-bottom: 2px solid $rhs-blue;
-
-    .read-more-link {
-    }
-  }
+  margin-bottom: 40px;
 
 }
 
@@ -125,6 +108,7 @@ p {
   .header-link {
     text-decoration: none;
     color: $light-blue;
+    box-shadow: none;
   }
 
   .header-title {
@@ -206,14 +190,66 @@ p {
   padding: 20px 0;
 
   .footer-text {
+    padding-left: 0;
     color: $light-blue;
     margin: 0;
   }
 
 }
 
+.abridged {
+
+  .blog-content {
+    margin-top: 20px;
+    padding-top: 10px;
+    background: #fff;
+
+    .read-more {
+      text-align: center;
+      margin-top: 20px;
+
+      .read-more-link {
+        background: $sky-blue;
+        padding: 10px 0;
+        display: block;
+        box-shadow: none;
+        color: #fff;
+
+        &:hover {
+          background: $rhs-blue;
+        }
+      }
+    }
+
+    .blog-p {
+      height: 400px;
+      overflow: hidden;
+    }
+
+    p {
+      padding: 0 24px;
+    }
+  }
+}
+
+
 
 @media (min-width: 800px) {
+
+  .abridged {
+    .blog-header {
+      vertical-align: top;
+      display: inline-block;
+      width: 30%;
+    }
+
+    .blog-content {
+      display: inline-block;
+      width: 65%;
+      color: rgba(0,0,0,0.7);
+    }
+  }
+
 
   .nav-bar-wrapper {
     z-index: 1;
@@ -238,13 +274,14 @@ p {
   .header {
     background-color: $pitch-blue;
 
-    .header-link {
+    .header-title {
+      text-align: left;
+      padding: 0 20px;
 
-      .header-title {
-        text-align: left;
-        padding: 0 20px;
+      .header-link {
       }
     }
+    
   }
 
   .nav {
