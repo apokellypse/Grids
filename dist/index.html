@@ -7,86 +7,96 @@
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
   <link rel="stylesheet" type="text/css" href="css/style.css">
-  <title>Kelly Yu</title>
+  <title>Home | Kelly Yu</title>
 </head>
 <body>
 
-<div class="nav-bar-wrapper">
-
-  <div class="nav-bar">
-
-    <header class="header">
-      <h1 class="header-title"><a class="header-link" href="index.html">Kelly Yu</a></h1>
-    </header>
-
-    <a class="js-nav-trigger nav-trigger" href="#">+ expand menu +</a>
-
-    <!-- turn into template -->
-    <nav class="nav">
-      <ul class="nav-list">
-
-        <li class="nav-list-item">
-          <a class="nav-link current-page" href="index.html">Home</a>
-        </li>
-        <li class="nav-list-item">
-          <a class="nav-link" href="resume.html">Resume</a>
-        </li>
-        <li class="nav-list-item">
-          <a class="nav-link" href="code.html">Coding</a>
-        </li>
-        <li class="nav-list-item">
-          <a class="nav-link" href="blog.html">Blog</a>
-        </li>
-
-      </ul>
-    </nav>
-
-  </div>
+<div class="nav-band">
+<!-- try to use the ::before or ::after for icons -->
+  <span class="nav-icon"></span>
+  <span class="nav-label">Home</span>
 </div>
 
-<article class="container">
+<header class="header">
+  <div class="double-col">
+    <img class="profile-img">
+  </div>
+  <div class="double-col">
+    <div class="profile-name"><h1 class="primary-header title">Kelly Yu</h1></div>
+    <div class="profile-intro">Welcome to my website :)</div>
+  </div>
+</header>
 
-  <section class="about-me-wrapper wrapper">
+<section class="section summary-list-wrapper">
+  <ul class="summary-list">
+    <li class="summary-list-item">
+      <div class="double-col">
+        <h1 class="primary-header">student</h1>
+        <p class="summary">senior @ Cornell</p>
+      </div>
+      <div class="double-col">
+        <div class="summary-img"></div>
+      </div>
+    </li>
 
-    <h1 class="about-me accent-header">About</h1>
-    <p class="about-me-blurb">I'm a junior at <a target="_blank" href="http://www.cornell.edu/">Cornell University</a> pursuing a B.S. in
-    <a target="_blank" href="https://www.cs.cornell.edu/">Computer Science</a> and the <a target="_blank" href="http://gdiac.cis.cornell.edu/programs/minor.php" href="_blank">Game Design</a> minor.</p>
-    <div class="bar-chart"></div>
+    <li class="summary-list-item">
+      <div class="double-col">
+        <h1 class="primary-header">engineer</h1>
+        <p class="summary">incoming software engineer @ Yext</p>
+      </div>
+      <div class="double-col">
+        <div class="summary-img"></div>
+      </div>
+    </li>
 
-  </section>
+    <li class="summary-list-item">
+      <div class="double-col">
+        <h1 class="primary-header">illustrator</h1>
+        <p class="summary">freelance</p>
+      </div>
+      <div class="double-col">
+        <div class="summary-img"></div>
+      </div>
+    </li>
+  </ul>
 
-  <!-- convert this to template eventually, with loops -->
-  <section class="pie-chart-wrapper wrapper">
-    <h1 class="accent-header">Hobbies</h1>
+</section>
 
-    <ul class="pie-chart-list">
-      <li>Band</li>
-      <li>Spotify</li>
-      <li>Coding</li>
-      <li>Painting</li>
-      <li>Napping</li>
-      <li>Local Events</li>
-      <li>Gaming</li>
-      <li>Quora</li>
-    </ul>
-
-    <div class="pie-chart"></div>
-    <!-- <div class="pie-chart2"></div> -->
-  </section>
-
-</article>
+<nav class="nav">
+  <ul class="nav-list">
+    <li class="nav-list-item">
+      <a class="nav-link" href="index.html">
+        <div class="nav-icon"></div>
+        <div class="nav-icon-label">Home</div>
+      </a>
+    </li>
+    <li class="nav-list-item">
+      <a class="nav-link" href="tech.html">
+        <div class="nav-icon"></div>
+        <div class="nav-icon-label">Tech</div>
+      </a>
+    </li>
+    <li class="nav-list-item">
+      <a class="nav-link" href="art.html">
+        <div class="nav-icon"></div>
+        <div class="nav-icon-label">Art</div>
+      </a>
+    </li>
+    <li class="nav-list-item">
+      <a class="nav-link" href="writing.html">
+        <div class="nav-icon"></div>
+        <div class="nav-icon-label">Writing</div>
+      </a>
+    </li>
+  </ul>
+</nav>
 
 <footer class="footer">
-  <p class="footer-text">Copyright &copy; 2015 Kelly Yu</p>
-  <p class="footer-text">View the site's <a href="https://github.com/apokellypse/Grids">Source Code on GitHub</a></p>
+  <p class="footer-text">Copyright &copy; 2017 Kelly Yu</p>
 </footer>
 
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="http://cdn.jsdelivr.net/handlebarsjs/3.0.3/handlebars.min.js"></script>
-<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-<script src="js/common.js"></script>
-<script src="js/index.js"></script>
+<script src=""></script>
 
 
 </body>
