@@ -6,6 +6,7 @@ html {
 
 html, body {
   height: 100%;
+  background-color: $sky;
 }
 
 @mixin prefix($property, $value, $vendors: webkit moz ms o) {
@@ -32,15 +33,22 @@ ul, li {
   list-style-type: none;
 }
 
+.container {
+  min-height: 100%;
+  width: 100%;
+  background-color: $white;
+  padding-bottom: 56px;
+}
+
 // top bar
 
 .band {
-  width: 100%;
+  width: 96%;
   color: white;
   background-color: $black;
   height: 24px;
   display: block;
-  padding: 8px;
+  padding: 2.1%;
 
   &:before {
     content: "";
@@ -99,7 +107,7 @@ ul, li {
   margin: 0;
   margin-left: 24px;
   padding: 0 8px;
-  @include prefix(box-shadow, -24px 0 0 0 $lime, webkit moz);
+  @include prefix(box-shadow, -24px 0 0 0 $dark-gray, webkit moz);
 }
 
 // images
@@ -129,7 +137,7 @@ ul, li {
 
 
   .nav-list {
-    @include prefix(box-shadow, 0 -2px 0 0 $sky, webkit moz);
+    @include prefix(box-shadow, 0 0 0 2px $sky, webkit moz);
     overflow: hidden;
 
     .nav-list-item {
@@ -174,7 +182,8 @@ ul, li {
 .double-col {
   width: 45%;
   vertical-align: middle;
-  display: inline-block;
+  float: left;
+  // display: inline-block;
 
   .primary-header {
     margin-top: 10%;
@@ -201,6 +210,56 @@ ul, li {
     margin: 0 4px;
   }
 
+}
+
+// project wrappers
+
+// more specific
+.project-list-wrapper, .blog-list-wrapper {
+  padding: 0;
+
+  // &:last-of-type {
+  //   margin-bottom: 56px;
+  // }
+
+  .secondary-header {
+    padding-top: 7.5%;
+  }
+
+  .tertiary-header {
+    padding: 4px 8px;
+  }
+
+  .project-blurb, .blog-post-body {
+    margin: 0;
+    margin-left: 24px;
+    padding: 0 8px;
+    @include prefix(box-shadow, -24px 0 0 0 $black, webkit moz);
+    padding-bottom: 5%;
+  }
+}
+
+.date {
+  font-size: 0.8em;
+  color: $gray;
+  &:before {
+    content: "//";
+    width: 8px;
+    height: 8px;
+    float: left;
+  }
+}
+
+@media (min-width: 480px) {
+  .container, .nav {
+    width: 480px;
+    margin: 0 auto;
+  }
+//   .profile-img {
+//     height: 25%;
+//     width: 25%;
+//     margin: 0 12.5%;
+//   }
 }
 
 @media (min-width: 768px) {

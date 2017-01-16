@@ -23,3 +23,28 @@
     }
   }
 }
+
+// more specific
+.portfolio-list {
+  overflow: hidden;
+  clear: both;
+
+  .portfolio-list-item {
+    width: 50%;
+
+    .portfolio-img {
+      width: 97.5%;
+      margin: 5% 2.5%;
+      margin-left: 0;
+      height: 100px;
+      object-fit: cover;
+    }
+
+    &:nth-child(even) {
+      .portfolio-img {
+        margin: 5% 2.5%;
+        margin-right: 0;
+      }
+    }
+  }
+}
