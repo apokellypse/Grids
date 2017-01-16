@@ -1,0 +1,21 @@
+.tech-band:before {
+  background-image: url("../img/icons/#{$tech}_icon_white.png");
+}
+
+.social-link[href*="#{$github}"]:before {
+  background-image: url("../img/icons/#{$github}_icon.png");
+}
+
+.social-link[href*="#{$linkedin}"]:before {
+  background-image: url("../img/icons/#{$linkedin}_icon.png");
+}
+
+.nav {
+  .current-page[href="#{$tech-url}"] {
+    color: $black;
+
+    &:before {
+      background-image: url("../img/icons/#{$tech}_icon_black.png");
+    }
+  }
+}

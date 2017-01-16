@@ -1,0 +1,25 @@
+.art-band:before {
+  background-image: url("../img/icons/#{$art}_icon_white.png");
+}
+
+.social-link[href*="#{$behance}"]:before {
+  background-image: url("../img/icons/#{$behance}_icon.png");
+}
+
+.social-link[href*="#{$dribbble}"]:before {
+  background-image: url("../img/icons/#{$dribbble}_icon.png");
+}
+
+.social-link[href*="#{$etsy}"]:before {
+  background-image: url("../img/icons/#{$etsy}_icon.png");
+}
+
+.nav {
+  .current-page[href="#{$art-url}"] {
+    color: $black;
+
+    &:before {
+      background-image: url("../img/icons/#{$art}_icon_black.png");
+    }
+  }
+}

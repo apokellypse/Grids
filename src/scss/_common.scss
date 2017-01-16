@@ -17,6 +17,10 @@ html, body {
   #{$property}: #{$value};
 }
 
+p {
+  margin: 0;
+}
+
 a {
   color: $sky;
   text-decoration: none;
@@ -30,33 +34,26 @@ ul, li {
 
 // top bar
 
-.nav-band {
+.band {
   width: 100%;
   color: white;
-  background-color: $indigo;
-  height: 40px;
-  // margin-bottom: 32px;
+  background-color: $black;
+  height: 24px;
+  display: block;
 
-  .nav-label {
-    width: 88px;
-    margin: 0 auto;
-    left: 0;
-    right: 0;
+  &:before {
+    content: "";
+    background-size: 24px 24px;
+    display: block;
+    width: 24px;
+    height: 24px;
+    float: left;
+    margin: 0 4px;
+  }
 
-    &:before {
-      content: "";
-      background-image: url("../img/icons/home_icon_white.png");
-      background-size: 24px 24px;
-      display: block;
-      width: 24px;
-      height: 24px;
-      float: left;
-      margin: 8px 4px 0 0;
-    }
-
-    .primary-header {
-      font-size: 1.2em;
-    }
+  &.primary-header {
+    font-size: 1.2em;
+    padding: 8px;
   }
 }
 
@@ -64,7 +61,7 @@ ul, li {
 
 .header, .section {
   display: block;
-  padding: 24px 0;
+  padding: 24px 5%;
 }
 
 .header {
@@ -73,17 +70,14 @@ ul, li {
 
   .double-col {
     float: left;
-  }
-}
 
-.double-col {
-  width: 42.5%;
-  margin: 0 2% 0 5%;
-  vertical-align: middle;
-  display: inline-block;
+    &:nth-child(even) {
+      margin-left: 5%;
+    }
 
-  .primary-header {
-    margin-top: 25%;
+    &:nth-child(odd) {
+      margin-right: 5%;
+    }
   }
 }
 
@@ -112,12 +106,28 @@ ul, li {
   &:nth-child(odd) {
     .double-col {
       float: left;
+
+      &:nth-child(even) {
+        margin-left: 5%;
+      }
+
+      &:nth-child(odd) {
+        margin-right: 5%;
+      }
     }
   }
 
   &:nth-child(even) {
     .double-col {
       float: right;
+
+      &:nth-child(even) {
+        margin-right: 5%;
+      }
+
+      &:nth-child(odd) {
+        margin-left: 5%;
+      }
     }
   }
 
@@ -149,18 +159,13 @@ ul, li {
       height: 80px;
       text-align: center;
       @include prefix(box-shadow, 0 0 0 1px $sky, webkit moz);
-
-      .nav-link {
-        display: block;
-        position: relative;
-        height: 80px;
-      }
-
     }
   }
 
-  .nav-icon-label {
-    position: absolute;
+  .nav-link {
+    display: block;
+    height: 80px;
+    position: relative;
     top: 4px;
     left: 0;
     right: 0;
@@ -176,36 +181,45 @@ ul, li {
     }
   }
 
-  .nav-list-item:nth-child(1) {
-    .nav-icon-label {
-      &:before {
-        background-image: url("../img/icons/home_icon_blue.png");
-      }
+  @for $i from 1 through length($page-urls) {
+    $name: nth($page-names, $i);
+    $url: nth($page-urls, $i);
+    .nav-link[href="#{$url}"]:before {
+      background-image: url("../img/icons/#{$name}_icon_blue.png");
     }
   }
 
-  .nav-list-item:nth-child(2) {
-    .nav-icon-label {
-      &:before {
-        background-image: url("../img/icons/tech_icon_blue.png");
-      }
-    }
-  }
+}
 
-  .nav-list-item:nth-child(3) {
-    .nav-icon-label {
-      &:before {
-        background-image: url("../img/icons/art_icon_blue.png");
-      }
-    }
-  }
+// double columns
+.double-col {
+  width: 45%;
+  vertical-align: middle;
+  display: inline-block;
 
-  .nav-list-item:nth-child(4) {
-    .nav-icon-label {
-      &:before {
-        background-image: url("../img/icons/writing_icon_blue.png");
-      }
-    }
+  .primary-header {
+    margin-top: 10%;
+  }
+}
+
+// hero images
+.hero-header-img {
+  width: 100%;
+}
+
+// social links
+.social-link {
+  display: block;
+  height: 24px;
+
+  &:before {
+    content: "";
+    background-size: 20px 20px;
+    display: block;
+    width: 20px;
+    height: 20px;
+    float: left;
+    margin: 0 4px;
   }
 
 }

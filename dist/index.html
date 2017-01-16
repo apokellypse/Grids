@@ -11,79 +11,66 @@
 </head>
 <body>
 
-<div class="nav-band">
-  <div class="nav-label"><h1 class="primary-header band">Home</h1></div>
-</div>
+<!-- pls optimize this later, you don't need so many divs -->
+<!-- also, get rid of unused classes -->
+<div class="container">
 
-<header class="header">
-  <div class="double-col">
-    <img class="profile-img" alt="Kelly Yu's profile image" src="img/profile_img.jpg">
-  </div>
-  <div class="double-col">
-    <div class="profile-name"><h1 class="primary-header title">Kelly Yu</h1></div>
-    <div class="profile-intro">Welcome to my website :)</div>
-  </div>
-</header>
+  <h1 class="primary-header home-band band">Home</h1>
 
-<section class="section summary-list-wrapper">
-  <ul class="summary-list">
-    <li class="summary-list-item">
-      <div class="double-col">
-        <h1 class="primary-header">student</h1>
-        <p class="summary">senior &#64; Cornell</p>
-      </div>
-      <div class="double-col img-wrapper">
-        <img class="summary-img" alt="vector art of books" src="img/summary/books_gray.png">
-      </div>
-    </li>
+  <header class="header">
+    <img class="profile-img double-col" alt="Kelly Yu's profile image" src="img/profile_img.jpg">
+    <div class="double-col">
+      <h1 class="primary-header">Kelly Yu</h1>
+      <p class="profile-intro">Welcome to my website :)</p>
+    </div>
+  </header>
 
-    <li class="summary-list-item">
-      <div class="double-col">
-        <h1 class="primary-header">engineer</h1>
-        <p class="summary">incoming software engineer &#64; Yext</p>
-      </div>
-      <div class="double-col img-wrapper">
-        <img class="summary-img" alt="vector art of laptop" src="img/summary/laptop_gray.png">
-      </div>
-    </li>
+  <section class="section summary-list-wrapper">
+    <ul class="summary-list">
+      <li class="summary-list-item">
+        <div class="double-col">
+          <h1 class="primary-header">student</h1>
+          <p class="summary">senior &#64; Cornell</p>
+        </div>
+        <img class="double-col summary-img" alt="vector art of books" src="img/summary/books_gray.png">
+      </li>
 
-    <li class="summary-list-item">
-      <div class="double-col">
-        <h1 class="primary-header">illustrator</h1>
-        <p class="summary">freelance</p>
-      </div>
-      <div class="double-col img-wrapper">
-        <img class="summary-img" alt="vector art of pusheen" src="img/summary/pusheen_gray.png">
-      </div>
-    </li>
-  </ul>
+      <li class="summary-list-item">
+        <div class="double-col">
+          <h1 class="primary-header">engineer</h1>
+          <p class="summary">incoming software engineer &#64; Yext</p>
+        </div>
+        <img class="double-col summary-img" alt="vector art of laptop" src="img/summary/laptop_gray.png">
+      </li>
 
-</section>
+      <li class="summary-list-item">
+        <div class="double-col">
+          <h1 class="primary-header">illustrator</h1>
+          <p class="summary">freelance</p>
+        </div>
+        <img class="double-col summary-img" alt="vector art of pusheen" src="img/summary/pusheen_gray.png">
+      </li>
+    </ul>
+  </section>
 
-<nav class="nav">
-  <ul class="nav-list">
-    <li class="nav-list-item">
-      <a class="nav-link" href="index.html">
-        <div class="nav-icon-label">Home</div>
-      </a>
-    </li>
-    <li class="nav-list-item">
-      <a class="nav-link" href="tech.html">
-        <div class="nav-icon-label">Tech</div>
-      </a>
-    </li>
-    <li class="nav-list-item">
-      <a class="nav-link" href="art.html">
-        <div class="nav-icon-label">Art</div>
-      </a>
-    </li>
-    <li class="nav-list-item">
-      <a class="nav-link" href="writing.html">
-        <div class="nav-icon-label">Writing</div>
-      </a>
-    </li>
-  </ul>
-</nav>
+  <nav class="nav">
+    <ul class="nav-list">
+      <li class="nav-list-item">
+        <a class="nav-link current-page" href="index.html">Home</a>
+      </li>
+      <li class="nav-list-item">
+        <a class="nav-link" href="tech.html">Tech</a>
+      </li>
+      <li class="nav-list-item">
+        <a class="nav-link" href="art.html">Art</a>
+      </li>
+      <li class="nav-list-item">
+        <a class="nav-link" href="writing.html">Writing</a>
+      </li>
+    </ul>
+  </nav>
+
+</div><!-- end container -->
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src=""></script>

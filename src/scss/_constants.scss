@@ -1,0 +1,20 @@
+$index-url:     "index.html";
+$tech-url:      "tech.html";
+$art-url:       "art.html";
+$writing-url:   "writing.html";
+
+$index:         "home";
+$tech:          "tech";
+$art:           "art";
+$writing:       "writing";
+
+$github:        "github";
+$linkedin:      "linkedin";
+$behance:       "behance";
+$dribbble:      "dribble";
+$etsy:          "etsy";
+$medium:        "medium";
+$wordpress:     "wordpress";
+
+$page-urls:      $index-url, $tech-url, $art-url, $writing-url;
+$page-names:     $index, $tech, $art, $writing;

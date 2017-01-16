@@ -1,0 +1,13 @@
+.home-band:before {
+  background-image: url("../img/icons/#{$index}_icon_white.png");
+}
+
+.nav {
+  .current-page[href="#{$index-url}"] {
+    color: $black;
+
+    &:before {
+      background-image: url("../img/icons/#{$index}_icon_black.png");
+    }
+  }
+}
