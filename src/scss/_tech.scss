@@ -3,11 +3,11 @@
 }
 
 .social-link[href*="#{$github}"]:before {
-  background-image: url("../img/icons/#{$github}_icon.png");
+  background-image: url("../img/social/#{$github}_icon.png");
 }
 
 .social-link[href*="#{$linkedin}"]:before {
-  background-image: url("../img/icons/#{$linkedin}_icon.png");
+  background-image: url("../img/social/#{$linkedin}_icon.png");
 }
 
 .nav {
@@ -19,3 +19,46 @@
     }
   }
 }
+
+// more specific
+.project-list-wrapper {
+  padding: 0;
+
+  &:last-of-type {
+    margin-bottom: 56px;
+  }
+
+  .secondary-header {
+    padding-top: 5%;
+  }
+
+  .tertiary-header {
+    padding: 4px 8px;
+  }
+
+  .project-blurb {
+    margin: 0;
+    margin-left: 24px;
+    padding: 0 8px;
+    @include prefix(box-shadow, -24px 0 0 0 $green, webkit moz);
+    padding-bottom: 5%;
+  }
+}
+
+.project-list-item {
+  .tertiary-header, .date {
+    display: inline-block;
+  }
+
+  .date {
+    font-size: 0.8em;
+    color: $gray;
+    &:before {
+      content: "//";
+      width: 8px;
+      height: 8px;
+      float: left;
+    }
+  }
+}
+

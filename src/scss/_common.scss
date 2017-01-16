@@ -40,6 +40,7 @@ ul, li {
   background-color: $black;
   height: 24px;
   display: block;
+  padding: 8px;
 
   &:before {
     content: "";
@@ -53,7 +54,7 @@ ul, li {
 
   &.primary-header {
     font-size: 1.2em;
-    padding: 8px;
+    margin: 0;
   }
 }
 
@@ -83,9 +84,22 @@ ul, li {
 
 // headers
 
-.primary-header {
+.primary-header, {
+  margin: 8px 0;
+}
+
+.secondary-header {
   margin: 0;
-  padding: 8px 0;
+  margin-left: 12px;
+  padding: 8px 8px;
+  @include prefix(box-shadow, -12px 0 0 0 $green, webkit moz);
+}
+
+.tertiary-header {
+  margin: 0;
+  margin-left: 24px;
+  padding: 0 8px;
+  @include prefix(box-shadow, -24px 0 0 0 $lime, webkit moz);
 }
 
 // images
@@ -99,42 +113,7 @@ ul, li {
   border-radius: 50%;
 }
 
-.summary-list-item {
-  clear: both;
-  overflow: hidden; // gives actual height to parent
 
-  &:nth-child(odd) {
-    .double-col {
-      float: left;
-
-      &:nth-child(even) {
-        margin-left: 5%;
-      }
-
-      &:nth-child(odd) {
-        margin-right: 5%;
-      }
-    }
-  }
-
-  &:nth-child(even) {
-    .double-col {
-      float: right;
-
-      &:nth-child(even) {
-        margin-right: 5%;
-      }
-
-      &:nth-child(odd) {
-        margin-left: 5%;
-      }
-    }
-  }
-
-  &:last-child {
-    margin-bottom: 56px;
-  }
-}
 
 // bottom nav
 

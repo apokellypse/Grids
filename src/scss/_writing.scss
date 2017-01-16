@@ -3,11 +3,11 @@
 }
 
 .social-link[href*="#{$medium}"]:before {
-  background-image: url("../img/icons/#{$medium}_icon.png");
+  background-image: url("../img/social/#{$medium}_icon.png");
 }
 
 .social-link[href*="#{$wordpress}"]:before {
-  background-image: url("../img/icons/#{$wordpress}_icon.png");
+  background-image: url("../img/social/#{$wordpress}_icon.png");
 }
 
 .nav {

@@ -11,3 +11,40 @@
     }
   }
 }
+
+.summary-list-item {
+  clear: both;
+  overflow: hidden; // gives actual height to parent
+
+  &:nth-child(odd) {
+    .double-col {
+      float: left;
+
+      &:nth-child(even) {
+        margin-left: 5%;
+      }
+
+      &:nth-child(odd) {
+        margin-right: 5%;
+      }
+    }
+  }
+
+  &:nth-child(even) {
+    .double-col {
+      float: right;
+
+      &:nth-child(even) {
+        margin-right: 5%;
+      }
+
+      &:nth-child(odd) {
+        margin-left: 5%;
+      }
+    }
+  }
+
+  &:last-child {
+    margin-bottom: 56px;
+  }
+}

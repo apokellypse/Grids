@@ -3,15 +3,15 @@
 }
 
 .social-link[href*="#{$behance}"]:before {
-  background-image: url("../img/icons/#{$behance}_icon.png");
+  background-image: url("../img/social/#{$behance}_icon.png");
 }
 
 .social-link[href*="#{$dribbble}"]:before {
-  background-image: url("../img/icons/#{$dribbble}_icon.png");
+  background-image: url("../img/social/#{$dribbble}_icon.png");
 }
 
 .social-link[href*="#{$etsy}"]:before {
-  background-image: url("../img/icons/#{$etsy}_icon.png");
+  background-image: url("../img/social/#{$etsy}_icon.png");
 }
 
 .nav {
